@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business OS — The workspace that builds itself</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/public/css/global.css">
+<link rel="stylesheet" href="/public/css/components.css">
+<link rel="stylesheet" href="/public/css/pages/landing.css">
+</head>
+<body>
+
+  <div class="ambient" aria-hidden="true"></div>
+
+  <!-- ===== NAV ===== -->
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-dot"></span>
+        <span class="brand-mark">Business OS</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#product">Product</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#features">Features</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="auth/login.html" class="nav-login">Log in</a>
+        <a href="onboarding/onboarding.html" class="btn-primary btn-sm">Get started</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="product">
+      <div class="hero-copy reveal">
+        <p class="badge">Generative UI, not another template</p>
+        <h1 class="hero-title">Business software that builds itself around you.</h1>
+        <p class="hero-sub">Answer a few questions. Watch your workspace assemble in real time — the exact modules you need, none of the bloat you don't.</p>
+        <div class="hero-actions">
+          <a href="onboarding/onboarding.html" class="btn-primary">Get started free</a>
+          <a href="#how-it-works" class="btn-outline">See how it works</a>
+        </div>
+        <p class="hero-note">No credit card. Workspace ready in under 2 minutes.</p>
+      </div>
+
+      <div class="hero-preview reveal">
+        <div class="canvas-frame">
+          <div class="canvas-header">
+            <span class="canvas-os-name">Northside Studio OS</span>
+            <span class="canvas-status">Live</span>
+          </div>
+          <div class="module-field">
+            <div class="module module-stagger" style="--d:0">
+              <div class="module-head"><span class="module-icon" data-icon="clients"></span><span class="module-title">Client pipeline</span></div>
+              <div class="kanban">
+                <div class="kanban-col"><h4>Leads</h4><span class="kanban-count">6</span></div>
+                <div class="kanban-col"><h4>Active</h4><span class="kanban-count">3</span></div>
+                <div class="kanban-col"><h4>Done</h4><span class="kanban-count">11</span></div>
+              </div>
+            </div>
+            <div class="module module-stagger" style="--d:1">
+              <div class="module-head"><span class="module-icon" data-icon="revenue"></span><span class="module-title">Revenue</span></div>
+              <svg class="ledger-chart" viewBox="0 0 200 60" preserveAspectRatio="none">
+                <polyline class="chart-line" points="0,50 30,42 60,44 90,28 120,32 150,14 180,18 200,6" fill="none" stroke-width="2.5"/>
+              </svg>
+              <p class="module-sub">Up 18% from last month.</p>
+            </div>
+            <div class="module module-stagger" style="--d:2">
+              <div class="module-head"><span class="module-icon" data-icon="team"></span><span class="module-title">Team</span></div>
+              <div class="avatar-row"><span class="avatar">AK</span><span class="avatar">JM</span><span class="avatar">RT</span></div>
+              <p class="module-sub">3 people, one shared calendar.</p>
+            </div>
+            <div class="module module-stagger" style="--d:3">
+              <div class="module-head"><span class="module-icon" data-icon="insights"></span><span class="module-title">Readiness</span></div>
+              <div class="dial-wrap">
+                <div class="dial" style="--pct:92"><div class="dial-inner">92%</div></div>
+                <p class="module-sub">Calibrated and ready.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STATS STRIP ===== -->
+    <section class="stats-strip reveal">
+      <div class="stats-inner">
+        <div class="stat-block"><span class="stat-value">4 min</span><span class="stat-label">Average setup time</span></div>
+        <div class="stat-block"><span class="stat-value">1</span><span class="stat-label">Workspace, every module</span></div>
+        <div class="stat-block"><span class="stat-value">0</span><span class="stat-label">Templates to configure</span></div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="how-it-works" id="how-it-works">
+      <p class="badge center">How it works</p>
+      <h2 class="section-title center">Three steps. One workspace.</h2>
+
+      <div class="steps-grid">
+        <div class="step-card reveal">
+          <span class="step-number">01</span>
+          <h3 class="step-title">Answer a few questions</h3>
+          <p class="step-desc">Tell us about your team, your focus, and how you get paid. Takes about two minutes.</p>
+        </div>
+        <div class="step-card reveal">
+          <span class="step-number">02</span>
+          <h3 class="step-title">Watch it build itself</h3>
+          <p class="step-desc">Your answers assemble a live workspace in front of you — CRM, invoicing, chat, whatever fits.</p>
+        </div>
+        <div class="step-card reveal">
+          <span class="step-number">03</span>
+          <h3 class="step-title">Start running your business</h3>
+          <p class="step-desc">No setup wizard, no empty dashboard. It opens ready to use, built around how you actually work.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="features" id="features">
+      <p class="badge center">What's inside</p>
+      <h2 class="section-title center">Every module, only when you need it.</h2>
+
+      <div class="feature-grid">
+        <div class="feature-card reveal">
+          <span class="feature-icon" data-icon="clients"></span>
+          <h3 class="feature-title">Client pipeline</h3>
+          <p class="feature-desc">Track leads, active work, and closed deals without a spreadsheet.</p>
+        </div>
+        <div class="feature-card reveal">
+          <span class="feature-icon" data-icon="invoices"></span>
+          <h3 class="feature-title">Invoicing</h3>
+          <p class="feature-desc">Send invoices and get paid — one-time, recurring, or retainer.</p>
+        </div>
+        <div class="feature-card reveal">
+          <span class="feature-icon" data-icon="emailchat"></span>
+          <h3 class="feature-title">Team chat</h3>
+          <p class="feature-desc">One thread per project instead of scattered email and DMs.</p>
+        </div>
+        <div class="feature-card reveal">
+          <span class="feature-icon" data-icon="revenue"></span>
+          <h3 class="feature-title">Revenue tracking</h3>
+          <p class="feature-desc">See what's coming in, what's owed, and where it's headed.</p>
+        </div>
+        <div class="feature-card reveal">
+          <span class="feature-icon" data-icon="saas"></span>
+          <h3 class="feature-title">Automations</h3>
+          <p class="feature-desc">Let routine follow-ups and reminders run themselves.</p>
+        </div>
+        <div class="feature-card reveal">
+          <span class="feature-icon" data-icon="insights"></span>
+          <h3 class="feature-title">Insights</h3>
+          <p class="feature-desc">A plain-language read on how the business is actually doing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA BAND ===== -->
+    <section class="cta-band reveal">
+      <h2 class="cta-title">Ready to see your workspace?</h2>
+      <p class="cta-sub">It only takes a few answers to find out.</p>
+      <a href="onboarding/onboarding.html" class="btn-primary btn-lg">Get started free</a>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-dot"></span>
+        <span class="brand-mark">Business OS</span>
+        <p class="footer-tagline">The adaptive operating system for running your business.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="#product">Overview</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#features">Features</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <a href="auth/login.html">Log in</a>
+        <a href="auth/register.html">Create account</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Business OS. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="../public/js/pages/landing.js"></script>
+</body>
+</html>
