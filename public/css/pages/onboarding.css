@@ -1,0 +1,123 @@
+/* ===================================================
+   ONBOARDING PAGE — layout specific to onboarding.html
+   Buttons, cards, module styles come from components.css
+=================================================== */
+
+.app{
+  position: relative;
+  z-index: 1;
+  max-width: 1320px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+}
+.topbar-step{ font-size: .85rem; color: var(--ink-faint); font-weight: 600; }
+
+.stage{
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: 1rem 2rem 2rem;
+}
+@media (max-width: 900px){ .stage{ grid-template-columns: 1fr; } }
+
+.panel{ position: relative; }
+.panel-input{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+}
+
+/* ===== BACK / START OVER CONTROLS ===== */
+.step-controls{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity .25s ease;
+}
+.step-controls.visible{ height: auto; opacity: 1; overflow: visible; }
+
+/* ===== QUESTIONS — directional slide depending on back/forward ===== */
+.question-stack{ position: relative; }
+.question{ display: none; }
+.question.active{ display: block; }
+.question.active.dir-forward{ animation: slideInForward .5s cubic-bezier(.22,.9,.3,1) both; }
+.question.active.dir-back{ animation: slideInBack .5s cubic-bezier(.22,.9,.3,1) both; }
+@keyframes slideInForward{ from{ opacity: 0; transform: translateX(24px); } to{ opacity: 1; transform: translateX(0); } }
+@keyframes slideInBack{ from{ opacity: 0; transform: translateX(-24px); } to{ opacity: 1; transform: translateX(0); } }
+
+.question .badge{ margin-bottom: 1.1rem; }
+.question-title{
+  font-weight: 700;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  line-height: 1.12;
+  margin: 0 0 1.6rem;
+}
+#companyEcho{ color: var(--accent); }
+
+.input-row{ display: flex; gap: .75rem; }
+.input-row .text-input{ flex: 1; }
+
+.choice-grid{ margin: 0; }
+
+.ready-copy{
+  color: var(--ink-soft);
+  max-width: 38ch;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-size: .98rem;
+  font-weight: 500;
+}
+
+.progress-rail{ display: flex; gap: .35rem; margin-top: 2.25rem; }
+.progress-tick{ height: 5px; flex: 1; background: var(--border); border-radius: 999px; transition: background .3s ease; }
+.progress-tick.done{ background: var(--accent); }
+.progress-tick.current{ background: var(--sun); box-shadow: 0 0 0 3px var(--sun-soft); }
+
+/* ===== CANVAS (extends components.css) ===== */
+.panel-canvas{ display: flex; }
+.canvas-frame{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-height: 640px;
+}
+.canvas-header{ flex-shrink: 0; }
+.module-field{
+  flex: 1;
+  overflow-y: auto;
+  align-content: start;
+}
+
+.canvas-empty{
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 3.5rem;
+  font-size: .92rem;
+  color: var(--ink-faint);
+  font-weight: 500;
+}
+
+/* ===== STATUS BAR ===== */
+.statusbar{
+  display: flex; align-items: center; gap: .7rem;
+  padding: .9rem 2rem 1.5rem;
+  font-size: .85rem; color: var(--ink-soft); font-weight: 600;
+}
+.status-dot{ width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0; animation: pulse 2s infinite; }
+@keyframes pulse{ 0%,100%{ opacity: 1; } 50%{ opacity: .35; } }
+.status-text{ transition: opacity .25s ease; }

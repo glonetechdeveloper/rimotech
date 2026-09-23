@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business OS — Log in</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../public/css/global.css">
+<link rel="stylesheet" href="../../public/css/components.css">
+<link rel="stylesheet" href="../../public/css/pages/auth.css">
+<link rel="stylesheet" href="../../public/css/ai-agent.css">
+</head>
+<body>
+
+  <div class="ambient" id="ambient" aria-hidden="true"></div>
+
+  <div class="auth-decor" aria-hidden="true">
+    <svg class="decor-shape d1" style="top:9%;left:7%;width:44px;height:44px;" viewBox="0 0 44 44" fill="none">
+      <circle cx="22" cy="22" r="18" stroke="#2F57FF" stroke-width="1.6" stroke-dasharray="4 5"/>
+    </svg>
+    <svg class="decor-shape d2" style="top:14%;right:9%;width:34px;height:34px;" viewBox="0 0 34 34" fill="none">
+      <rect x="3" y="3" width="28" height="28" rx="6" stroke="#FFC53D" stroke-width="1.6" transform="rotate(12 17 17)"/>
+    </svg>
+    <svg class="decor-shape d3" style="bottom:12%;left:10%;width:30px;height:30px;" viewBox="0 0 30 30" fill="none">
+      <path d="M15 3 L18 12 L27 15 L18 18 L15 27 L12 18 L3 15 L12 12 Z" stroke="#14182B" stroke-width="1.4"/>
+    </svg>
+    <svg class="decor-shape d4" style="bottom:18%;right:8%;width:26px;height:26px;" viewBox="0 0 26 26" fill="none">
+      <circle cx="13" cy="13" r="10" stroke="#2F57FF" stroke-width="1.6"/>
+    </svg>
+  </div>
+
+  <div class="auth-wrap">
+    <div class="auth-card">
+
+      <div class="auth-top">
+        <a href="../index.html" class="brand">
+          <img src="/assets/images/Rimotech_logo.png" alt="Business OS logo">
+          <span class="brand-mark"></span>
+        </a>
+      </div>
+
+      <p class="badge">Welcome back</p>
+      <h1 class="step-title">Log in to your workspace.</h1>
+      <p class="step-sub">Pick up right where you left off.</p>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="text-input" placeholder="you@company.com" autocomplete="email">
+        <p class="field-hint" id="emailHint"></p>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <div class="password-wrap">
+          <input type="password" id="password" class="text-input" placeholder="Your password" autocomplete="current-password">
+          <button type="button" class="toggle-visibility" id="togglePw" aria-label="Show password">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+        </div>
+        <p class="field-hint" id="pwHint"></p>
+      </div>
+
+      <div class="remember-row">
+        <button type="button" class="remember-check" id="rememberCheck">
+          <span class="remember-box" id="rememberBox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          Remember me
+        </button>
+        <a href="#" class="forgot-link">Forgot password?</a>
+      </div>
+
+      <button class="btn-primary is-disabled" id="loginBtn">Log in</button>
+
+      <p class="auth-footer-note">Don't have an account? <a href="register.html">Sign up</a></p>
+    </div>
+  </div>
+
+  <script src="../../public/js/pages/login.js"></script>
+  <script src="../../public/js/ai-agent.js"></script>
+</body>
+</html>

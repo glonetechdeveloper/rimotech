@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northside Studio — Finances</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../public/css/pages/finances.css">
+<link rel="stylesheet" href="../../public/css/ai-agent.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <a href="#" class="brand">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTYiIGZpbGw9IiMxNDE4MkIiLz48cGF0aCBkPSJNMzIgMTQgTDM3IDI4IEw1MSAzMiBMMzcgMzYgTDMyIDUwIEwyNyAzNiBMMTMgMzIgTDI3IDI4IFoiIGZpbGw9IiNGRkM1M0QiLz48Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSI2IiBmaWxsPSIjMkY1N0ZGIi8+PC9zdmc+" alt="Business OS logo">
+          <span class="brand-mark">Northside Studio</span>
+        </a>
+        <button class="icon-btn sidebar-close" id="sidebarClose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="./dashboard.html" class="nav-item" style="--d:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>Dashboard</a>
+        <a href="./chat.html" class="nav-item" style="--d:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Chat</a>
+        <a href="./crm.html" class="nav-item" style="--d:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1.5 1.5 0 011.5 1.5v8A1.5 1.5 0 0120 16h-9l-4.5 4v-4H4a1.5 1.5 0 01-1.5-1.5v-8A1.5 1.5 0 014 5z"/></svg>CRM</a>
+        <a href="./calendar.html" class="nav-item" style="--d:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>Calendar</a>
+        <a href="./tasks.html" class="nav-item" style="--d:4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 12l2.5 2.5L16 9"/></svg>Tasks</a>
+        <a href="./track.html" class="nav-item" style="--d:5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Time</a>
+        <a href="./finances.html" class="nav-item active" style="--d:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l3 3v15l-2-1.3-2 1.3-2-1.3-2 1.3-2-1.3-2 1.3V3z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>Finances</a>
+        <a href="./automations.html" class="nav-item" style="--d:4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>Automations</a>
+        <a href="./files.html" class="nav-item" style="--d:5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 012-2h4l2 2h7a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg>Files</a>
+        <a href="./activities.html" class="nav-item" style="--d:8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg>Activity</a>
+        <a href="./settings.html" class="nav-item" style="--d:5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 00.34 1.87l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.7 1.7 0 00-1.87-.34 1.7 1.7 0 00-1 1.55V21a2 2 0 01-4 0v-.09a1.7 1.7 0 00-1-1.55 1.7 1.7 0 00-1.87.34l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.7 1.7 0 00.34-1.87 1.7 1.7 0 00-1.55-1H3a2 2 0 010-4h.09a1.7 1.7 0 001.55-1 1.7 1.7 0 00-.34-1.87l-.06-.06a2 2 0 112.83-2.83l.06.06a1.7 1.7 0 001.87.34H9a1.7 1.7 0 001-1.55V3a2 2 0 014 0v.09a1.7 1.7 0 001 1.55 1.7 1.7 0 001.87-.34l.06-.06a2 2 0 112.83 2.83l-.06.06a1.7 1.7 0 00-.34 1.87V9a1.7 1.7 0 001.55 1H21a2 2 0 010 4h-.09a1.7 1.7 0 00-1.55 1z"/></svg>Settings</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-avatar">JP</div>
+        <div><div class="sidebar-user-name">Joseph Prince</div><div class="sidebar-user-role">Founder</div></div>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn hamburger" id="hamburgerBtn" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input type="text" id="topSearch" placeholder="Search invoices…">
+          <span class="search-kbd">/</span>
+        </div>
+        <div class="topbar-actions">
+          <button class="btn-new" id="newBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>New</button>
+          <div class="topbar-icon-group">
+            <button class="icon-btn" id="notifBtn" aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 01-3.4 0"/></svg><span class="notif-badge"></span></button>
+            <div class="dropdown-panel" id="notifPanel">
+              <div class="dropdown-header">Notifications</div>
+              <button class="dropdown-item"><span class="dd-dot"></span><span><div>Invoice #0142 was paid</div><div class="dropdown-item-sub">5 hours ago</div></span></button>
+              <button class="dropdown-item"><span class="dd-dot" style="background:var(--danger);"></span><span><div>Invoice #0138 is overdue</div><div class="dropdown-item-sub">1 day ago</div></span></button>
+            </div>
+          </div>
+          <div class="topbar-icon-group">
+            <div class="topbar-avatar" id="userBtn">JP</div>
+            <div class="dropdown-panel user-menu" id="userPanel">
+              <button class="dropdown-item" id="profileMenuBtn">Profile</button>
+              <button class="dropdown-item" id="settingsMenuBtn">Settings</button>
+              <div class="dropdown-divider"></div>
+              <button class="dropdown-item">Log out</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="page-head">
+          <div>
+            <h1 class="page-title">Finances</h1>
+            <p class="page-sub">Track invoices and see where your revenue stands.</p>
+          </div>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat-card"><div class="stat-card-label">Revenue (MTD)</div><div class="stat-card-value" data-count="8.2" data-decimals="1" data-prefix="$" data-suffix="k">$0k</div><div class="stat-card-delta">+18%</div></div>
+          <div class="stat-card"><div class="stat-card-label">Outstanding</div><div class="stat-card-value" data-count="3.1" data-decimals="1" data-prefix="$" data-suffix="k">$0k</div><div class="stat-card-delta">2 invoices</div></div>
+          <div class="stat-card"><div class="stat-card-label">Overdue</div><div class="stat-card-value" data-count="450" data-decimals="0" data-prefix="$">$0</div><div class="stat-card-delta down">1 invoice</div></div>
+          <div class="stat-card"><div class="stat-card-label">Paid this month</div><div class="stat-card-value" data-count="7" data-decimals="0">0</div><div class="stat-card-delta">Invoices</div></div>
+        </div>
+
+        <div class="revenue-card">
+          <div class="revenue-head">
+            <div class="revenue-title-group">
+              <span class="revenue-title">Revenue trend</span>
+              <span class="revenue-total" id="revenueTotal">$8,200 this month</span>
+            </div>
+            <div class="chart-tabs" id="chartTabs">
+              <button class="chart-tab active" data-period="days">Days</button>
+              <button class="chart-tab" data-period="weeks">Weeks</button>
+              <button class="chart-tab" data-period="months">Months</button>
+              <button class="chart-tab" data-period="years">Years</button>
+            </div>
+          </div>
+          <div class="chart-wrap" id="chartWrap">
+            <svg class="revenue-chart" id="revenueSvg" viewBox="0 0 600 220" preserveAspectRatio="none"></svg>
+            <div class="chart-tooltip" id="chartTooltip"></div>
+          </div>
+        </div>
+
+        <div class="filter-row">
+          <button class="filter-chip active" data-filter="all">All <span class="filter-count" id="countAll">0</span></button>
+          <button class="filter-chip" data-filter="paid">Paid <span class="filter-count" id="countPaid">0</span></button>
+          <button class="filter-chip" data-filter="pending">Pending <span class="filter-count" id="countPending">0</span></button>
+          <button class="filter-chip" data-filter="overdue">Overdue <span class="filter-count" id="countOverdue">0</span></button>
+          <select class="filter-period" id="periodFilter">
+            <option value="all">All time</option>
+            <option value="7">Due in next 7 days</option>
+            <option value="30">Due in next 30 days</option>
+            <option value="year">Due this year</option>
+          </select>
+        </div>
+
+        <div class="invoices-panel" id="invoicesPanel"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+
+  <div class="modal" id="newInvoiceModal" role="dialog" aria-modal="true">
+    <div class="modal-head"><div class="modal-title">Create invoice</div><button class="modal-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div>
+    <p class="modal-sub">Bill a client for work completed.</p>
+    <div class="profile-field"><label>Client</label><input type="text" class="profile-input" id="invClient" placeholder="e.g. Priya Shah"></div>
+    <div class="profile-field"><label>Amount</label><input type="text" class="profile-input" id="invAmount" placeholder="e.g. $1,200"></div>
+    <div class="profile-field"><label>Due date</label><input type="date" class="profile-input" id="invDue"></div>
+    <div class="modal-actions"><button class="btn-primary is-disabled" id="createInvoiceBtn">Create invoice</button></div>
+  </div>
+
+  <div class="modal" id="invoiceDetailModal" role="dialog" aria-modal="true">
+    <div class="modal-head"><div class="modal-title" id="detailInvNumber">Invoice #0000</div><button class="modal-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div>
+    <p class="modal-sub" id="detailInvClient">Client</p>
+    <div class="profile-field"><label>Amount</label><input type="text" class="profile-input" id="detailInvAmount"></div>
+    <div class="profile-field"><label>Status</label>
+      <select class="profile-select" id="detailInvStatus">
+        <option value="paid">Paid</option>
+        <option value="pending">Pending</option>
+        <option value="overdue">Overdue</option>
+      </select>
+    </div>
+    <div class="profile-field"><label>Due date</label><input type="date" class="profile-input" id="detailInvDue"></div>
+    <div class="modal-actions">
+      <button class="btn-secondary" id="remindInvoiceBtn">Send reminder</button>
+      <button class="btn-primary" id="saveInvoiceBtn">Save</button>
+    </div>
+    <div class="modal-actions" style="margin-top:.6rem;">
+      <button class="btn-danger" id="deleteInvoiceBtn" style="width:100%;">Delete invoice</button>
+    </div>
+  </div>
+
+  <div class="modal" id="profileModal" role="dialog" aria-modal="true">
+    <div class="modal-head"><div class="modal-title">Your profile</div><button class="modal-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div>
+    <p class="modal-sub">Update how your name appears across the workspace.</p>
+    <div class="profile-field"><label>Full name</label><input type="text" class="profile-input" value="Joseph Prince"></div>
+    <div class="profile-field"><label>Email</label><input type="email" class="profile-input" value="joseph@northsidestudio.com"></div>
+    <div class="modal-actions"><button class="btn-primary" id="saveProfile">Save changes</button></div>
+  </div>
+
+  <div class="modal" id="settingsModal" role="dialog" aria-modal="true">
+    <div class="modal-head"><div class="modal-title">Quick settings</div><button class="modal-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div>
+    <p class="modal-sub">Full settings live on their own page — here's the essentials.</p>
+    <div class="customize-row"><span class="customize-label">Invoice reminders</span><button class="switch on" role="switch" aria-checked="true"></button></div>
+    <div class="customize-row" style="border-bottom:none;"><span class="customize-label">Weekly revenue summary</span><button class="switch on" role="switch" aria-checked="true"></button></div>
+  </div>
+
+  <div class="toast-stack" id="toastStack"></div>
+
+<script src="../../public/js/pages/finances.js" type="module"></script>
+<script src="../../public/js/ai-agent.js"></script>
+</body>
+</html>

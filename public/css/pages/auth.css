@@ -1,0 +1,106 @@
+/* ===================================================
+   AUTH PAGES — signup / login layout
+   Buttons, text inputs, choice cards come from components.css
+=================================================== */
+
+.auth-wrap{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+.auth-card{
+  width: 100%;
+  max-width: 440px;
+  background: var(--bg-card);
+  border: 2px solid var(--ink);
+  border-radius: var(--r-lg);
+  box-shadow: 6px 6px 0 var(--border);
+  padding: 2.25rem 2rem;
+}
+.auth-top{ display: flex; justify-content: center; margin-bottom: 1.75rem; }
+
+/* Dot-grid texture layered under the two ambient glows, specific to auth pages */
+.ambient{
+  background-image:
+    radial-gradient(var(--border) 1px, transparent 1px),
+    radial-gradient(600px circle at var(--mx) var(--my), rgba(47,87,255,0.08), transparent 60%),
+    radial-gradient(700px circle at 10% 90%, rgba(255,197,61,0.15), transparent 55%);
+  background-size: 26px 26px, auto, auto;
+  background-position: -2px -2px, 0 0, 0 0;
+}
+
+/* A few thin outline shapes drifting slowly in the background — echoes the
+   logo's spark mark without competing with the card. */
+.auth-decor{ position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+.decor-shape{ position: absolute; opacity: .55; animation: floatShape 8s ease-in-out infinite; }
+.decor-shape.d2{ animation-delay: -2.5s; }
+.decor-shape.d3{ animation-delay: -5s; }
+.decor-shape.d4{ animation-delay: -1.5s; }
+@keyframes floatShape{
+  0%, 100%{ transform: translateY(0) rotate(0deg); }
+  50%{ transform: translateY(-14px) rotate(8deg); }
+}
+
+.auth-progress{ display: flex; gap: .35rem; margin-bottom: 1.75rem; }
+.progress-tick{ height: 5px; flex: 1; background: var(--border); border-radius: 999px; transition: background .3s ease; }
+.progress-tick.done{ background: var(--accent); }
+.progress-tick.current{ background: var(--sun); }
+
+.step{ display: none; }
+.step.active{ display: block; }
+.step.active.dir-forward{ animation: slideInForward .5s cubic-bezier(.22,.9,.3,1) both; }
+.step.active.dir-back{ animation: slideInBack .5s cubic-bezier(.22,.9,.3,1) both; }
+@keyframes slideInForward{ from{ opacity: 0; transform: translateX(20px); } to{ opacity: 1; transform: translateX(0); } }
+@keyframes slideInBack{ from{ opacity: 0; transform: translateX(-20px); } to{ opacity: 1; transform: translateX(0); } }
+
+.step-title{ font-weight: 700; font-size: 1.55rem; line-height: 1.2; margin-bottom: .4rem; }
+.step-sub{ font-size: .88rem; color: var(--ink-soft); margin-bottom: 1.5rem; font-weight: 500; }
+
+.field{ margin-bottom: 1.05rem; }
+.field label{ display: block; font-size: .78rem; font-weight: 700; color: var(--ink-soft); margin-bottom: .4rem; }
+.field .text-input{ width: 100%; }
+
+.password-wrap{ position: relative; }
+.password-wrap .text-input{ padding-right: 2.6rem; width: 100%; }
+.toggle-visibility{
+  position: absolute; right: .5rem; top: 50%; transform: translateY(-50%);
+  width: 30px; height: 30px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink-faint);
+  border-radius: 8px;
+}
+.toggle-visibility:hover{ color: var(--ink); background: var(--bg); }
+.toggle-visibility svg{ width: 18px; height: 18px; }
+
+.field-hint{ margin-top: .4rem; font-size: .75rem; color: var(--ink-faint); font-weight: 500; }
+.field-hint.error{ color: var(--danger); }
+
+.auth-choice-grid{ grid-template-columns: 1fr 1fr; margin-bottom: 1.75rem; }
+@media (max-width: 420px){ .auth-choice-grid{ grid-template-columns: 1fr; } }
+
+.auth-card .btn-primary{ width: 100%; }
+
+.auth-footer-note{ text-align: center; margin-top: 1.5rem; font-size: .85rem; color: var(--ink-soft); font-weight: 500; }
+.auth-footer-note a{ color: var(--accent-strong); font-weight: 700; }
+.auth-footer-note a:hover{ text-decoration: underline; }
+
+
+
+
+
+/* ===== LOGIN-SPECIFIC: remember me + forgot password ===== */
+.remember-row{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
+.remember-check{ display: flex; align-items: center; gap: .5rem; font-size: .84rem; font-weight: 600; color: var(--ink-soft); cursor: pointer; }
+.remember-box{
+  width: 18px; height: 18px; border: 2px solid var(--ink); border-radius: 5px;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background .15s ease;
+}
+.remember-box.checked{ background: var(--accent); border-color: var(--accent); }
+.remember-box svg{ width: 12px; height: 12px; color: #fff; opacity: 0; transition: opacity .1s ease; }
+.remember-box.checked svg{ opacity: 1; }
+.forgot-link{ font-size: .84rem; font-weight: 700; color: var(--accent-strong); }
+.forgot-link:hover{ text-decoration: underline; }
