@@ -356,7 +356,7 @@ img, svg{ display: block; max-width: 100%; }
 
 /* ===== BRAND MARK (now an image, clickable on every page) ===== */
 .brand{ display: flex; align-items: center; gap: .55rem; }
-.brand img{ width: 30px; height: 30px; border-radius: 9px; display: block; }
+.brand img{ width: 150px; height: 30px; border-radius: 9px; display: block; }
 .brand-mark{ font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; }
 
 /* ===== SITE NAV (landing page) ===== */

@@ -187,7 +187,7 @@
       setStatus(`Welcome to ${state.company || 'your'} workspace.`);
       canvasStatus.textContent = 'Live';
       launchBtn.textContent = "You're in ✓";
-      // In the real app: window.location.href = '../app/dashboard.html';
+      window.location.href = '../app/dashboard.html';
     }, 800);
   });
 
