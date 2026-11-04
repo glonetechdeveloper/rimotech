@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northside Studio — Inventory & Stocking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../public/css/pages/inventory.css">
+<link rel="stylesheet" href="../../public/css/ai-agent.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <div class="app-shell">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <a href="./dashboard.html" class="brand">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTYiIGZpbGw9IiMxNDE4MkIiLz48cGF0aCBkPSJNMzIgMTQgTDM3IDI4IEw1MSAzMiBMMzcgMzYgTDMyIDUwIEwyNyAzNiBMMTMgMzIgTDI3IDI4IFoiIGZpbGw9IiNGRkM1M0QiLz48Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSI2IiBmaWxsPSIjMkY1N0ZGIi8+PC9zdmc+" alt="Business OS logo">
+          <span class="brand-mark">Northside Studio</span>
+        </a>
+        <button class="icon-btn sidebar-close" id="sidebarClose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="./dashboard.html" class="nav-item" style="--d:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>Dashboard</a>
+        <a href="./search.html" class="nav-item" style="--d:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Search</a>
+        <a href="./chat.html" class="nav-item" style="--d:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Chat</a>
+        <a href="./notifications.html" class="nav-item" style="--d:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 01-3.4 0"/></svg>Notifications</a>
+        <a href="./crm.html" class="nav-item" style="--d:4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1.5 1.5 0 011.5 1.5v8A1.5 1.5 0 0120 16h-9l-4.5 4v-4H4a1.5 1.5 0 01-1.5-1.5v-8A1.5 1.5 0 014 5z"/></svg>CRM</a>
+        <a href="./calendar.html" class="nav-item" style="--d:5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>Calendar</a>
+        <a href="./tasks.html" class="nav-item" style="--d:6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 12l2.5 2.5L16 9"/></svg>Tasks</a>
+        <a href="./track.html" class="nav-item" style="--d:7"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Time</a>
+        <a href="./finances.html" class="nav-item" style="--d:8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l3 3v15l-2-1.3-2 1.3-2-1.3-2 1.3-2-1.3-2 1.3V3z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>Finances</a>
+        <a href="./documents.html" class="nav-item" style="--d:8.5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Documents</a>
+        <a href="./inventory.html" class="nav-item active" style="--d:9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>Inventory</a>
+        <a href="./reports.html" class="nav-item" style="--d:9.5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M11 20V4M18 20v-7"/></svg>Reports</a>
+        <a href="./automations.html" class="nav-item" style="--d:10"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>Automations</a>
+        <a href="./files.html" class="nav-item" style="--d:11"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 012-2h4l2 2h7a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg>Files</a>
+        <a href="./activities.html" class="nav-item" style="--d:12"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg>Activity</a>
+        <a href="./settings.html" class="nav-item" style="--d:13"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 00.34 1.87l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.7 1.7 0 00-1.87-.34 1.7 1.7 0 00-1 1.55V21a2 2 0 01-4 0v-.09a1.7 1.7 0 00-1-1.55 1.7 1.7 0 00-1.87.34l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.7 1.7 0 00.34-1.87 1.7 1.7 0 00-1.55-1H3a2 2 0 010-4h.09a1.7 1.7 0 001.55-1 1.7 1.7 0 00-.34-1.87l-.06-.06a2 2 0 112.83-2.83l.06.06a1.7 1.7 0 001.87.34H9a1.7 1.7 0 001-1.55V3a2 2 0 014 0v.09a1.7 1.7 0 001 1.55 1.7 1.7 0 001.87-.34l.06-.06a2 2 0 112.83 2.83l-.06.06a1.7 1.7 0 00-.34 1.87V9a1.7 1.7 0 001.55 1H21a2 2 0 010 4h-.09a1.7 1.7 0 00-1.55 1z"/></svg>Settings</a>
+      </nav>
+      <a href="./settings.html" class="sidebar-bottom" title="Account settings">
+        <div class="sidebar-avatar">JP</div>
+        <div><div class="sidebar-user-name">Joseph Prince</div><div class="sidebar-user-role">Founder</div></div>
+      </a>
+    </aside>
+
+    <div class="main">
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <button class="icon-btn hamburger" id="hamburgerBtn" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input type="text" id="topSearch" placeholder="Search SKU, item, barcode, or vendor…">
+          <span class="search-kbd">/</span>
+        </div>
+        <div class="topbar-actions">
+          <button class="btn-new" id="btnTopNew" onclick="document.getElementById('btnNewItem').click()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>Add SKU</button>
+          <div class="topbar-avatar" id="userBtn">JP</div>
+        </div>
+      </header>
+
+      <!-- PAGE CONTENT -->
+      <div class="content">
+        <!-- Page Header -->
+        <div class="page-head">
+          <div>
+            <h1 class="page-title">Inventory & Stocking</h1>
+            <p class="page-sub">Track real-time stock levels, multi-warehouse allocations, reorder thresholds, and valuations.</p>
+          </div>
+          <div class="page-head-actions">
+            <button class="btn-action" id="btnExportCsv">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              Export CSV
+            </button>
+            <button class="btn-action primary" id="btnNewItem">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              Add New SKU
+            </button>
+          </div>
+        </div>
+
+        <!-- Metric KPI Cards -->
+        <div class="inventory-stats">
+          <div class="stat-card">
+            <div class="stat-card-label">Total Stock Valuation</div>
+            <div class="stat-card-value" id="statTotalValuation">$0</div>
+            <div class="stat-card-delta">Asset value on hand</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-label">Active SKUs</div>
+            <div class="stat-card-value" id="statTotalSkus">0</div>
+            <div class="stat-card-delta">Across all categories</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-label">Low Stock Alerts</div>
+            <div class="stat-card-value" id="statLowStock">0</div>
+            <div class="stat-card-delta warn">Below safe reorder level</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-label">Out of Stock</div>
+            <div class="stat-card-value" id="statOutOfStock">0</div>
+            <div class="stat-card-delta danger">Requires immediate PO</div>
+          </div>
+        </div>
+
+        <!-- Industry & Client Persona Selector -->
+        <div class="persona-card">
+          <div class="persona-top">
+            <span class="persona-label">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+              Client Business Vertical / Inventory Type
+            </span>
+            <span style="font-size:.72rem; color:var(--ink-faint); font-weight:700;">Filter by industry workflow</span>
+          </div>
+          <div class="persona-grid">
+            <button class="persona-pill active" data-persona="all">
+              <span>All Business Types</span>
+            </button>
+            <button class="persona-pill" data-persona="retail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              <span>Retail & E-Commerce</span>
+            </button>
+            <button class="persona-pill" data-persona="wholesale">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              <span>Wholesale & B2B Distribution</span>
+            </button>
+            <button class="persona-pill" data-persona="food">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+              <span>Food & Hospitality (Perishables)</span>
+            </button>
+            <button class="persona-pill" data-persona="manufacturing">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 00.34 1.87l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.7 1.7 0 00-1.87-.34 1.7 1.7 0 00-1 1.55V21a2 2 0 01-4 0v-.09a1.7 1.7 0 00-1-1.55 1.7 1.7 0 00-1.87.34l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.7 1.7 0 00.34-1.87 1.7 1.7 0 00-1.55-1H3a2 2 0 010-4h.09a1.7 1.7 0 001.55-1 1.7 1.7 0 00-.34-1.87l-.06-.06a2 2 0 112.83-2.83l.06.06a1.7 1.7 0 001.87.34H9a1.7 1.7 0 001-1.55V3a2 2 0 014 0v.09a1.7 1.7 0 001 1.55 1.7 1.7 0 001.87-.34l.06-.06a2 2 0 112.83 2.83l-.06.06a1.7 1.7 0 00-.34 1.87V9a1.7 1.7 0 001.55 1H21a2 2 0 010 4h-.09a1.7 1.7 0 00-1.55 1z"/></svg>
+              <span>Manufacturing & Assembly</span>
+            </button>
+            <button class="persona-pill" data-persona="internal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              <span>Internal Gear & Assets</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Search & Filter Controls -->
+        <div class="controls-card">
+          <div class="controls-row">
+            <div class="table-search-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+              <input type="text" id="tableSearch" placeholder="Filter items by name, SKU, or category…">
+            </div>
+
+            <div class="location-select-wrap">
+              <span class="location-select-label">Location:</span>
+              <select class="custom-select" id="locationSelect">
+                <option value="all">All Locations (5)</option>
+                <option value="Main Warehouse">Main Warehouse</option>
+                <option value="Retail Storefront">Retail Storefront</option>
+                <option value="Cold Storage">Cold Storage (Kitchen)</option>
+                <option value="Production Floor">Production Floor</option>
+                <option value="3PL Logistics Hub">3PL Logistics Hub</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="filter-chips">
+            <button class="stock-filter-chip active" data-status="all">All Items <span class="chip-count" id="chipCountAll">0</span></button>
+            <button class="stock-filter-chip" data-status="low">⚠️ Low Stock <span class="chip-count" id="chipCountLow">0</span></button>
+            <button class="stock-filter-chip" data-status="out">❌ Out of Stock <span class="chip-count" id="chipCountOut">0</span></button>
+            <button class="stock-filter-chip" data-status="instock">✅ Healthy Stock <span class="chip-count" id="chipCountIn">0</span></button>
+          </div>
+        </div>
+
+        <!-- Inventory Table Card -->
+        <div class="table-card">
+          <div class="table-responsive">
+            <table class="inv-table">
+              <thead>
+                <tr>
+                  <th>Product / SKU</th>
+                  <th>Location</th>
+                  <th>Stock on Hand</th>
+                  <th>Status</th>
+                  <th>Unit Cost & Price</th>
+                  <th>Total Value</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="invTableBody">
+                <!-- Dynamically rendered rows by inventory.js -->
+              </tbody>
+            </table>
+          </div>
+
+          <div class="empty-table-state" id="emptyTableState" style="display:none;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            <div class="empty-title">No Matching Stock Items</div>
+            <div class="empty-sub">Try adjusting your search terms, client vertical, or warehouse location.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODALS -->
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+
+  <!-- 1. Stock Adjustment Modal -->
+  <div class="modal-dialog" id="adjustModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog-head">
+      <div>
+        <div class="modal-dialog-title">Stock In / Out Adjustment</div>
+        <div style="font-size:.78rem; color:var(--ink-soft);" id="adjustItemName">Product Name</div>
+      </div>
+      <button class="icon-btn modal-close-btn" aria-label="Close modal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+    </div>
+    <div class="modal-dialog-body">
+      <div style="font-size:.82rem; font-weight:700; color:var(--accent-strong);" id="adjustCurrentQty">0 units currently on hand</div>
+
+      <div class="form-field">
+        <label>Adjustment Type</label>
+        <select class="form-field-select" id="adjustTypeSelect">
+          <option value="received">Receive Stock In (+) — From Supplier / PO</option>
+          <option value="dispatched">Dispatch Stock Out (-) — Sold / Shipped</option>
+          <option value="damaged">Damage / Loss (-) — Broken or Expired</option>
+          <option value="audit_add">Audit Surplus (+) — Cycle Count Found</option>
+          <option value="audit_sub">Audit Shortage (-) — Cycle Count Missing</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label>Quantity to Adjust</label>
+        <input type="number" min="1" class="form-field-input" id="adjustQtyInput" value="1">
+      </div>
+
+      <div class="form-field">
+        <label>Reason / Reference Note</label>
+        <input type="text" class="form-field-input" id="adjustReasonInput" placeholder="e.g. Received PO-882 or damaged packaging">
+      </div>
+    </div>
+    <div class="modal-dialog-foot">
+      <button class="btn-action modal-close-btn">Cancel</button>
+      <button class="btn-action primary" id="btnConfirmAdjust">Apply Stock Adjustment</button>
+    </div>
+  </div>
+
+  <!-- 2. Reorder / Purchase Order Modal -->
+  <div class="modal-dialog" id="reorderModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog-head">
+      <div>
+        <div class="modal-dialog-title">Create Supplier Purchase Order</div>
+        <div style="font-size:.78rem; color:var(--ink-soft);" id="reorderItemName">Product Name</div>
+      </div>
+      <button class="icon-btn modal-close-btn" aria-label="Close modal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+    </div>
+    <div class="modal-dialog-body">
+      <div style="background:#f9fafc; padding:.75rem 1rem; border-radius:8px; border:1px solid var(--border); font-size:.82rem;">
+        <div><strong>Primary Supplier:</strong> <span id="reorderSupplierName">Vendor</span></div>
+        <div style="margin-top:.25rem;"><strong>Estimated Lead Time:</strong> <span id="reorderLeadTime">7 days</span></div>
+      </div>
+
+      <div class="form-field">
+        <label>Order Quantity (Units)</label>
+        <input type="number" min="1" class="form-field-input" id="reorderQtyInput" value="50">
+      </div>
+
+      <div style="display:flex; justify-content:space-between; align-items:center; font-size:.88rem; font-weight:800; border-top:1px dashed var(--border); padding-top:.75rem;">
+        <span>Estimated Cost Total:</span>
+        <span style="color:var(--accent-strong);" id="reorderEstCost">$0.00</span>
+      </div>
+    </div>
+    <div class="modal-dialog-foot">
+      <button class="btn-action modal-close-btn">Cancel</button>
+      <button class="btn-action primary" id="btnConfirmReorder">Generate Purchase Order</button>
+    </div>
+  </div>
+
+  <!-- 3. Add New Item Modal -->
+  <div class="modal-dialog" id="newItemModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog-head">
+      <div class="modal-dialog-title">Catalog New Stock Item</div>
+      <button class="icon-btn modal-close-btn" aria-label="Close modal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+    </div>
+    <div class="modal-dialog-body">
+      <div class="form-field">
+        <label>Product / Item Name</label>
+        <input type="text" class="form-field-input" id="newProdName" placeholder="e.g. Ergonomic Office Swivel Chair">
+      </div>
+
+      <div class="form-grid-2">
+        <div class="form-field">
+          <label>SKU Code</label>
+          <input type="text" class="form-field-input" id="newProdSku" placeholder="e.g. CHR-ERG-01">
+        </div>
+        <div class="form-field">
+          <label>Category</label>
+          <input type="text" class="form-field-input" id="newProdCategory" placeholder="e.g. Furniture, Electronics">
+        </div>
+      </div>
+
+      <div class="form-grid-2">
+        <div class="form-field">
+          <label>Client Industry Vertical</label>
+          <select class="form-field-select" id="newProdPersona">
+            <option value="retail">Retail & E-Commerce</option>
+            <option value="wholesale">Wholesale & Distribution</option>
+            <option value="food">Food & Hospitality</option>
+            <option value="manufacturing">Manufacturing & Assembly</option>
+            <option value="internal">Internal Studio Gear</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Primary Storage Location</label>
+          <select class="form-field-select" id="newProdLocation">
+            <option value="Main Warehouse">Main Warehouse</option>
+            <option value="Retail Storefront">Retail Storefront</option>
+            <option value="Cold Storage">Cold Storage</option>
+            <option value="Production Floor">Production Floor</option>
+            <option value="3PL Logistics Hub">3PL Logistics Hub</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-grid-2">
+        <div class="form-field">
+          <label>Initial Quantity on Hand</label>
+          <input type="number" min="0" class="form-field-input" id="newProdQty" value="10">
+        </div>
+        <div class="form-field">
+          <label>Low Stock Reorder Alert Level</label>
+          <input type="number" min="1" class="form-field-input" id="newProdMin" value="5">
+        </div>
+      </div>
+
+      <div class="form-grid-2">
+        <div class="form-field">
+          <label>Unit Cost Price ($)</label>
+          <input type="number" step="0.01" class="form-field-input" id="newProdCost" placeholder="e.g. 45.00">
+        </div>
+        <div class="form-field">
+          <label>Unit Selling Price ($)</label>
+          <input type="number" step="0.01" class="form-field-input" id="newProdPrice" placeholder="e.g. 119.00">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label>Primary Supplier / Vendor</label>
+        <input type="text" class="form-field-input" id="newProdSupplier" placeholder="e.g. Global Supplies Ltd.">
+      </div>
+    </div>
+    <div class="modal-dialog-foot">
+      <button class="btn-action modal-close-btn">Cancel</button>
+      <button class="btn-action primary" id="btnSaveNewItem">Add to Inventory</button>
+    </div>
+  </div>
+
+  <!-- 4. SKU Details & Audit Movement Drawer -->
+  <div class="modal-dialog" id="detailDrawer" role="dialog" aria-modal="true">
+    <div class="modal-dialog-head">
+      <div>
+        <div class="modal-dialog-title" id="detailDrawerTitle">Item Name</div>
+        <div style="font-size:.76rem; color:var(--ink-soft);" id="detailDrawerSku">SKU: 000</div>
+      </div>
+      <button class="icon-btn modal-close-btn" aria-label="Close modal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+    </div>
+    <div class="modal-dialog-body">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:.65rem; background:#f9fafc; border:1px solid var(--border); border-radius:8px; padding:.85rem; font-size:.82rem;">
+        <div><strong>Location:</strong> <span id="detailDrawerLocation">Warehouse</span></div>
+        <div><strong>Category:</strong> <span id="detailDrawerCategory">Category</span></div>
+        <div><strong>Stock on Hand:</strong> <span id="detailDrawerQty">0 units</span></div>
+        <div><strong>Min Alert Point:</strong> <span id="detailDrawerMin">0 units</span></div>
+        <div><strong>Unit Cost:</strong> <span id="detailDrawerCost">$0.00</span></div>
+        <div><strong>Selling Price:</strong> <span id="detailDrawerPrice">$0.00</span></div>
+        <div style="grid-column:1/-1;"><strong>Gross Margin:</strong> <span style="font-weight:800; color:var(--success);" id="detailDrawerMargin">0%</span></div>
+      </div>
+
+      <div style="font-size:.8rem; font-weight:800; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-faint); margin-top:.35rem;">
+        Stock Movement & Audit History
+      </div>
+      <div class="history-log-list" id="detailMovementLogs">
+        <!-- Rendered by inventory.js -->
+      </div>
+    </div>
+    <div class="modal-dialog-foot">
+      <button class="btn-action modal-close-btn">Close</button>
+    </div>
+  </div>
+
+  <!-- TOAST STACK -->
+  <div class="toast-stack" id="toastStack"></div>
+
+  <script src="../../public/js/pages/inventory.js" type="module"></script>
+  <script src="../../public/js/ai-agent.js"></script>
+</body>
+</html>
