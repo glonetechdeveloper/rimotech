@@ -173,7 +173,7 @@
     if (!activeQ) return;
     const cards = [...activeQ.querySelectorAll('.choice-card')];
     if (!cards.length) return;
-    const index = { '1': 0, '2': 1, '3': 2, '4': 3, '5': 4 }[e.key];
+    const index = { '1': 0, '2': 1, '3': 2, '4': 3, '5': 4, '6': 5, '7': 6, '8': 7 }[e.key];
     if (index !== undefined && cards[index]) selectChoice(cards[index]);
   });
 
@@ -181,8 +181,29 @@
   launchBtn.addEventListener('click', () => {
     launchBtn.disabled = true;
     launchBtn.textContent = 'Opening…';
-    setStatus('Getting your workspace ready.');
+    setStatus('Configuring tailored workspace.');
     canvasStatus.textContent = 'Opening';
+
+    // Persist user's selective onboarding choices
+    try {
+      const profile = {
+        company: state.company || 'Northside Studio',
+        structure: state.structure || 'small',
+        focus: state.focus || 'warehousing',
+        priority: state.priority || 'fulfillment',
+        payment: state.payment || 'invoices',
+        currentTool: state.currentTool || 'spreadsheets',
+        completedAt: new Date().toISOString()
+      };
+      if (window.WorkspaceEngine) {
+        window.WorkspaceEngine.saveProfile(profile);
+      } else {
+        localStorage.setItem('rimotech_workspace_profile', JSON.stringify(profile));
+      }
+    } catch(err) {
+      console.warn('Could not save profile:', err);
+    }
+
     setTimeout(() => {
       setStatus(`Welcome to ${state.company || 'your'} workspace.`);
       canvasStatus.textContent = 'Live';

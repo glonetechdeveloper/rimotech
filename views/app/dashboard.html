@@ -22,11 +22,11 @@
       <div class="sidebar-top">
         <a href="./dashboard.html" class="brand">
           <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTYiIGZpbGw9IiMxNDE4MkIiLz48cGF0aCBkPSJNMzIgMTQgTDM3IDI4IEw1MSAzMiBMMzcgMzYgTDMyIDUwIEwyNyAzNiBMMTMgMzIgTDI3IDI4IFoiIGZpbGw9IiNGRkM1M0QiLz48Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSI2IiBmaWxsPSIjMkY1N0ZGIi8+PC9zdmc+" alt="Business OS logo">
-          <span class="brand-mark">Northside Studio</span>
+          <span class="brand-mark" id="brandMark">Northside Studio</span>
         </a>
         <button class="icon-btn sidebar-close" id="sidebarClose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
       </div>
-      <nav class="sidebar-nav">
+      <nav class="sidebar-nav" id="sidebarNav">
         <a href="./dashboard.html" class="nav-item active" style="--d:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>Dashboard</a>
         <a href="./search.html" class="nav-item" style="--d:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Search</a>
         <a href="./chat.html" class="nav-item" style="--d:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Chat</a>
@@ -36,6 +36,7 @@
         <a href="./tasks.html" class="nav-item" style="--d:6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 12l2.5 2.5L16 9"/></svg>Tasks</a>
         <a href="./track.html" class="nav-item" style="--d:7"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Time</a>
         <a href="./finances.html" class="nav-item" style="--d:8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l3 3v15l-2-1.3-2 1.3-2-1.3-2 1.3-2-1.3-2 1.3V3z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>Finances</a>
+        <a href="./documents.html" class="nav-item" style="--d:8.5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Documents</a>
         <a href="./reports.html" class="nav-item" style="--d:9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M11 20V4M18 20v-7"/></svg>Reports</a>
         <a href="./automations.html" class="nav-item" style="--d:10"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>Automations</a>
         <a href="./files.html" class="nav-item" style="--d:11"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 012-2h4l2 2h7a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg>Files</a>
@@ -43,8 +44,8 @@
         <a href="./settings.html" class="nav-item" style="--d:13"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 00.34 1.87l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.7 1.7 0 00-1.87-.34 1.7 1.7 0 00-1 1.55V21a2 2 0 01-4 0v-.09a1.7 1.7 0 00-1-1.55 1.7 1.7 0 00-1.87.34l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.7 1.7 0 00.34-1.87 1.7 1.7 0 00-1.55-1H3a2 2 0 010-4h.09a1.7 1.7 0 001.55-1 1.7 1.7 0 00-.34-1.87l-.06-.06a2 2 0 112.83-2.83l.06.06a1.7 1.7 0 001.87.34H9a1.7 1.7 0 001-1.55V3a2 2 0 014 0v.09a1.7 1.7 0 001 1.55 1.7 1.7 0 001.87-.34l.06-.06a2 2 0 112.83 2.83l-.06.06a1.7 1.7 0 00-.34 1.87V9a1.7 1.7 0 001.55 1H21a2 2 0 010 4h-.09a1.7 1.7 0 00-1.55 1z"/></svg>Settings</a>
       </nav>
       <a href="./settings.html" class="sidebar-bottom" title="Account settings">
-        <div class="sidebar-avatar">JP</div>
-        <div><div class="sidebar-user-name">Joseph Prince</div><div class="sidebar-user-role">Founder</div></div>
+        <div class="sidebar-avatar" id="sidebarAvatar">JP</div>
+        <div><div class="sidebar-user-name" id="sidebarUserName">Joseph Prince</div><div class="sidebar-user-role" id="sidebarUserRole">Founder</div></div>
       </a>
     </aside>
 
@@ -104,7 +105,7 @@
         <div class="welcome-row">
           <div>
             <h1 class="welcome-title" id="welcomeTitle">Good morning, Northside Studio 👋</h1>
-            <p class="welcome-sub">Here's what's happening across your workspace today.</p>
+            <p class="welcome-sub" id="welcomeSub">Here's what's happening across your workspace today.</p>
           </div>
         </div>
 

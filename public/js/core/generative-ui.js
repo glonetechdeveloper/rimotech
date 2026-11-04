@@ -31,7 +31,18 @@ window.GenerativeUI = (function(){
     emailchat: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>`,
     othertool: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v4M15 3v4M6 7h12l-1 4a5 5 0 01-10 0L6 7z"/><path d="M12 15v6"/></svg>`,
     nothing: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.6 4.4L18 9l-4.4 1.6L12 15l-1.6-4.4L6 9l4.4-1.6L12 3z"/><path d="M19 15l.7 1.9L21.5 17.5l-1.8.7L19 20l-.7-1.8-1.8-.7 1.8-.7L19 15z"/></svg>`,
-    insights: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.5l2.3 2.3 4.7-5.4"/></svg>`
+    insights: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.5l2.3 2.3 4.7-5.4"/></svg>`,
+    ecommerce: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>`,
+    warehousing: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16Z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg>`,
+    powersystems: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
+    healthcare: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>`,
+    agriculture: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22s5.5-2 9-7.5C14.5 9 17 2 17 2s-7 2.5-12.5 6C-1 13.5 2 22 2 22z"/><path d="M11 13c1.5 2.5 4 4.5 7 5 1-2.5 1-6-1-8.5"/></svg>`,
+    artisans: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m14 7 3-3 4 4-3 3M6 21l8-8-4-4L2 17v4h4z"/></svg>`,
+    services: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>`,
+    fulfillment: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>`,
+    uptime: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>`,
+    coordination: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
+    contracts: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>`
   };
 
   function escapeHtml(str){
@@ -79,6 +90,69 @@ window.GenerativeUI = (function(){
           <div class="kanban-col"><h4>Support</h4><span class="kanban-count">9</span></div>
         </div>
     `,
+    'focus:ecommerce': () => `
+        <div class="module-head"><span class="module-icon">${icons.ecommerce}</span><span class="module-title">Order fulfillment</span></div>
+        <div class="kanban">
+          <div class="kanban-col"><h4>New</h4><span class="kanban-count">34</span></div>
+          <div class="kanban-col"><h4>Packed</h4><span class="kanban-count">20</span></div>
+          <div class="kanban-col"><h4>Dispatched</h4><span class="kanban-count">68</span></div>
+        </div>
+        <p class="module-sub">6 low-stock SKUs flagged for reorder.</p>
+    `,
+    'focus:warehousing': () => `
+        <div class="module-head"><span class="module-icon">${icons.warehousing}</span><span class="module-title">Bay storage & capacity</span></div>
+        <div class="kanban">
+          <div class="kanban-col"><h4>Zone A (Dry)</h4><span class="kanban-count">92%</span></div>
+          <div class="kanban-col"><h4>Zone B (Rack)</h4><span class="kanban-count">81%</span></div>
+          <div class="kanban-col"><h4>Zone C (Cold)</h4><span class="kanban-count">65%</span></div>
+        </div>
+        <p class="module-sub">12 inbound dock shipments scheduled today.</p>
+    `,
+    'focus:powersystems': () => `
+        <div class="module-head"><span class="module-icon">${icons.powersystems}</span><span class="module-title">Grid telemetry & load</span></div>
+        <div class="dial-wrap">
+          <div class="dial" style="--pct:99"><div class="dial-inner">99%</div></div>
+          <div>
+            <div style="font-weight:700;font-size:.9rem;">48.6 MW Active Output</div>
+            <p class="module-sub" style="margin:0;">Substation frequency 50.02 Hz · 0 fault alarms.</p>
+          </div>
+        </div>
+    `,
+    'focus:healthcare': () => `
+        <div class="module-head"><span class="module-icon">${icons.healthcare}</span><span class="module-title">Patient triage & clinic</span></div>
+        <div class="kanban">
+          <div class="kanban-col"><h4>Triage</h4><span class="kanban-count">6</span></div>
+          <div class="kanban-col"><h4>Consult</h4><span class="kanban-count">4</span></div>
+          <div class="kanban-col"><h4>Observ.</h4><span class="kanban-count">8</span></div>
+        </div>
+        <p class="module-sub">14 on-call doctors & nursing staff active.</p>
+    `,
+    'focus:agriculture': () => `
+        <div class="module-head"><span class="module-icon">${icons.agriculture}</span><span class="module-title">Field & silo telemetry</span></div>
+        <div class="stat-row" style="display:flex;gap:1.5rem;">
+          <div><div class="stat-value">68%</div><div class="stat-label">Soil moisture</div></div>
+          <div><div class="stat-value">72%</div><div class="stat-label">Silo capacity</div></div>
+        </div>
+        <p class="module-sub">Winter wheat harvest projected +14% yield.</p>
+    `,
+    'focus:artisans': () => `
+        <div class="module-head"><span class="module-icon">${icons.artisans}</span><span class="module-title">Workshop bench</span></div>
+        <div class="kanban">
+          <div class="kanban-col"><h4>Cut</h4><span class="kanban-count">3</span></div>
+          <div class="kanban-col"><h4>Craft</h4><span class="kanban-count">4</span></div>
+          <div class="kanban-col"><h4>Finish</h4><span class="kanban-count">2</span></div>
+        </div>
+        <p class="module-sub">Walnut dining table ready for final oil polish.</p>
+    `,
+    'focus:services': () => `
+        <div class="module-head"><span class="module-icon">${icons.services}</span><span class="module-title">Client retainers</span></div>
+        <div class="kanban">
+          <div class="kanban-col"><h4>Leads</h4><span class="kanban-count">4</span></div>
+          <div class="kanban-col"><h4>Active</h4><span class="kanban-count">6</span></div>
+          <div class="kanban-col"><h4>Delivered</h4><span class="kanban-count">18</span></div>
+        </div>
+        <p class="module-sub">$16.4k retainer revenue MTD.</p>
+    `,
     'focus:clients': () => `
         <div class="module-head"><span class="module-icon">${icons.clients}</span><span class="module-title">Client pipeline</span></div>
         <div class="kanban">
@@ -118,6 +192,28 @@ window.GenerativeUI = (function(){
           <div class="stat"><div class="stat-value">37</div><div class="stat-label">Signups today</div></div>
         </div>
     `,
+    'priority:fulfillment': () => `
+        <div class="module-head"><span class="module-icon">${icons.fulfillment}</span><span class="module-title">Fulfillment flow</span></div>
+        <div class="stat-row">
+          <div class="stat"><div class="stat-value">99.4%</div><div class="stat-label">On-time dispatch</div></div>
+          <div class="stat"><div class="stat-value">4.2h</div><div class="stat-label">Avg turnaround</div></div>
+        </div>
+        <p class="module-sub">Zero bottleneck across active queues.</p>
+    `,
+    'priority:uptime': () => `
+        <div class="module-head"><span class="module-icon">${icons.uptime}</span><span class="module-title">Asset uptime</span></div>
+        <div class="dial-wrap">
+          <div class="dial" style="--pct:99"><div class="dial-inner">99%</div></div>
+          <p class="module-sub">Zero critical downtime incidents this month.</p>
+        </div>
+    `,
+    'priority:coordination': () => `
+        <div class="module-head"><span class="module-icon">${icons.coordination}</span><span class="module-title">Crew & shift sync</span></div>
+        <ul class="mini-list">
+          <li><span>Morning Shift Handover</span><span style="color:var(--accent);font-weight:700;">Complete</span></li>
+          <li><span>Afternoon Crew Dispatch</span><span style="color:var(--sun);font-weight:700;">14 Staff Active</span></li>
+        </ul>
+    `,
     'priority:organized': () => `
         <div class="module-head"><span class="module-icon">${icons.organized}</span><span class="module-title">Getting organized</span></div>
         <ul class="mini-list">
@@ -143,6 +239,20 @@ window.GenerativeUI = (function(){
         <div class="stat-row">
           <div class="stat"><div class="stat-value">$14.6k</div><div class="stat-label">In the bank</div></div>
           <div class="stat"><div class="stat-value">$3.1k</div><div class="stat-label">Outstanding</div></div>
+        </div>
+    `,
+    'payment:contracts': () => `
+        <div class="module-head"><span class="module-icon">${icons.contracts}</span><span class="module-title">Supply contracts</span></div>
+        <ul class="mini-list">
+          <li><span>Bulk Agreement #842</span><span>$24,000 / mo</span></li>
+          <li><span>Off-Take Supply Term</span><span>Active</span></li>
+        </ul>
+    `,
+    'payment:direct': () => `
+        <div class="module-head"><span class="module-icon">${icons.onetime}</span><span class="module-title">Direct checkout & POS</span></div>
+        <div class="stat-row">
+          <div class="stat"><div class="stat-value">62</div><div class="stat-label">Transactions today</div></div>
+          <div class="stat"><div class="stat-value">$3.8k</div><div class="stat-label">Processed</div></div>
         </div>
     `,
     'payment:invoices': () => `

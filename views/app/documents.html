@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northside Studio — Document Studio & Invoicing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../public/css/pages/documents.css">
+<link rel="stylesheet" href="../../public/css/ai-agent.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <div class="app-shell">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <a href="./dashboard.html" class="brand">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTYiIGZpbGw9IiMxNDE4MkIiLz48cGF0aCBkPSJNMzIgMTQgTDM3IDI4IEw1MSAzMiBMMzcgMzYgTDMyIDUwIEwyNyAzNiBMMTMgMzIgTDI3IDI4IFoiIGZpbGw9IiNGRkM1M0QiLz48Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSI2IiBmaWxsPSIjMkY1N0ZGIi8+PC9zdmc+" alt="Business OS logo">
+          <span class="brand-mark">Northside Studio</span>
+        </a>
+        <button class="icon-btn sidebar-close" id="sidebarClose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="./dashboard.html" class="nav-item" style="--d:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>Dashboard</a>
+        <a href="./search.html" class="nav-item" style="--d:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Search</a>
+        <a href="./chat.html" class="nav-item" style="--d:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Chat</a>
+        <a href="./notifications.html" class="nav-item" style="--d:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 01-3.4 0"/></svg>Notifications</a>
+        <a href="./crm.html" class="nav-item" style="--d:4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1.5 1.5 0 011.5 1.5v8A1.5 1.5 0 0120 16h-9l-4.5 4v-4H4a1.5 1.5 0 01-1.5-1.5v-8A1.5 1.5 0 014 5z"/></svg>CRM</a>
+        <a href="./calendar.html" class="nav-item" style="--d:5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>Calendar</a>
+        <a href="./tasks.html" class="nav-item" style="--d:6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 12l2.5 2.5L16 9"/></svg>Tasks</a>
+        <a href="./track.html" class="nav-item" style="--d:7"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Time</a>
+        <a href="./finances.html" class="nav-item" style="--d:8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l3 3v15l-2-1.3-2 1.3-2-1.3-2 1.3-2-1.3-2 1.3V3z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>Finances</a>
+        <a href="./documents.html" class="nav-item active" style="--d:9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Documents</a>
+        <a href="./reports.html" class="nav-item" style="--d:10"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M11 20V4M18 20v-7"/></svg>Reports</a>
+        <a href="./automations.html" class="nav-item" style="--d:11"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>Automations</a>
+        <a href="./files.html" class="nav-item" style="--d:12"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 012-2h4l2 2h7a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg>Files</a>
+        <a href="./activities.html" class="nav-item" style="--d:13"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg>Activity</a>
+        <a href="./settings.html" class="nav-item" style="--d:14"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 00.34 1.87l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.7 1.7 0 00-1.87-.34 1.7 1.7 0 00-1 1.55V21a2 2 0 01-4 0v-.09a1.7 1.7 0 00-1-1.55 1.7 1.7 0 00-1.87.34l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.7 1.7 0 00.34-1.87 1.7 1.7 0 00-1.55-1H3a2 2 0 010-4h.09a1.7 1.7 0 001.55-1 1.7 1.7 0 00-.34-1.87l-.06-.06a2 2 0 112.83-2.83l.06.06a1.7 1.7 0 001.87.34H9a1.7 1.7 0 001-1.55V3a2 2 0 014 0v.09a1.7 1.7 0 001 1.55 1.7 1.7 0 001.87-.34l.06-.06a2 2 0 112.83 2.83l-.06.06a1.7 1.7 0 00-.34 1.87V9a1.7 1.7 0 001.55 1H21a2 2 0 010 4h-.09a1.7 1.7 0 00-1.55 1z"/></svg>Settings</a>
+      </nav>
+      <a href="./settings.html" class="sidebar-bottom" title="Account settings">
+        <div class="sidebar-avatar">JP</div>
+        <div><div class="sidebar-user-name">Joseph Prince</div><div class="sidebar-user-role">Founder</div></div>
+      </a>
+    </aside>
+
+    <div class="main">
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <button class="icon-btn hamburger" id="hamburgerBtn" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input type="text" id="topSearch" placeholder="Search templates or documents…">
+          <span class="search-kbd">/</span>
+        </div>
+        <div class="topbar-actions">
+          <button class="btn-new" id="btnNewDocTop" onclick="document.getElementById('btnReset').click()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>New Document</button>
+          <div class="topbar-icon-group">
+            <button class="icon-btn" id="notifBtn" aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 01-3.4 0"/></svg><span class="notif-badge"></span></button>
+            <div class="dropdown-panel" id="notifPanel">
+              <div class="dropdown-header">Document Alerts</div>
+              <button class="dropdown-item"><span class="dd-dot"></span><span><div>Dana executed Master Services Agreement</div><div class="dropdown-item-sub">1 hour ago</div></span></button>
+              <button class="dropdown-item"><span class="dd-dot"></span><span><div>Invoice #0142 marked paid</div><div class="dropdown-item-sub">5 hours ago</div></span></button>
+            </div>
+          </div>
+          <div class="topbar-icon-group">
+            <div class="topbar-avatar" id="userBtn">JP</div>
+            <div class="dropdown-panel user-menu" id="userPanel">
+              <button class="dropdown-item">Profile</button>
+              <button class="dropdown-item">Settings</button>
+              <div class="dropdown-divider"></div>
+              <button class="dropdown-item">Log out</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- PAGE CONTENT -->
+      <div class="content">
+        <!-- Page Header -->
+        <div class="page-head">
+          <div>
+            <h1 class="page-title">Document Studio & Onboarding Hub</h1>
+            <p class="page-sub">Generate itemized invoices, binding legal contracts, employee offer letters, and complete onboarding packets.</p>
+          </div>
+          <div class="page-head-actions">
+            <button class="btn-action" id="btnHistory">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Saved Docs (<span id="savedCountBadge">4</span>)
+            </button>
+            <button class="btn-action primary" id="btnPrint">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+              Print / PDF
+            </button>
+            <button class="btn-action" id="btnCopy">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+              Copy Text
+            </button>
+            <button class="btn-action" id="btnSave">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+              Save to Workspace
+            </button>
+            <button class="btn-action" id="btnReset" title="Reset template values">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 019-9 9.75 9.75 0 016.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 01-9 9 9.75 9.75 0 01-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+              Reset
+            </button>
+          </div>
+        </div>
+
+        <!-- Metric Cards -->
+        <div class="doc-stats-row">
+          <div class="stat-card">
+            <div class="stat-card-label">Total Documents</div>
+            <div class="stat-card-value" id="statTotalDocs">4</div>
+            <div class="stat-card-delta">Across all workspace hubs</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-label">Invoices & Billing</div>
+            <div class="stat-card-value" id="statInvoicesVal">1</div>
+            <div class="stat-card-delta">Tax, Retainers & Deposits</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-label">Contracts & Legal</div>
+            <div class="stat-card-value" id="statContractsVal">2</div>
+            <div class="stat-card-delta">MSAs, NDAs & SOWs</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-label">Onboarding & Operations</div>
+            <div class="stat-card-value" id="statOnboardingVal">1</div>
+            <div class="stat-card-delta">Offers, Assets & Payroll</div>
+          </div>
+        </div>
+
+        <!-- Template Selector Hub -->
+        <div class="template-hub-card">
+          <div class="template-hub-top">
+            <div class="filter-tabs">
+              <button class="filter-chip active" data-category="all">All Templates <span class="filter-badge">14</span></button>
+              <button class="filter-chip" data-category="invoices">Invoices & Billing <span class="filter-badge">3</span></button>
+              <button class="filter-chip" data-category="contracts">Contracts & Legal <span class="filter-badge">4</span></button>
+              <button class="filter-chip" data-category="employee">Employee Onboarding <span class="filter-badge">4</span></button>
+              <button class="filter-chip" data-category="client">Client & Vendor <span class="filter-badge">3</span></button>
+            </div>
+            <span style="font-size:.74rem; font-weight:700; color:var(--ink-faint);">Click any template to auto-populate the editor & live paper</span>
+          </div>
+
+          <div class="template-grid" id="templateGrid"></div>
+        </div>
+
+        <!-- Mobile View Toggles -->
+        <div class="mobile-view-tabs">
+          <button class="m-tab active" id="mTabEditor">Configurator Editor</button>
+          <button class="m-tab" id="mTabPreview">Live Document Sheet</button>
+        </div>
+
+        <!-- Studio Split Layout -->
+        <div class="studio-layout">
+          <!-- LEFT: Configurator Form Column -->
+          <div class="studio-col config-col" id="configCol">
+            <div class="config-card">
+              <div class="config-card-head">
+                <span class="config-card-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                  Document Editor & Settings
+                </span>
+                <span style="font-size:.72rem; color:var(--accent-strong); font-weight:800; text-transform:uppercase;">Live Syncing</span>
+              </div>
+              <div class="config-card-body" id="configBody">
+                <!-- Dynamically populated by documents.js -->
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Live Document Sheet Preview Column -->
+          <div class="studio-col preview-col" id="previewCol">
+            <!-- Toolbar -->
+            <div class="preview-toolbar">
+              <div class="toolbar-left">
+                <span class="preview-tag">WYSIWYG Paper Sheet</span>
+                <div class="zoom-controls">
+                  <button class="zoom-btn" data-scale="0.75">75%</button>
+                  <button class="zoom-btn" data-scale="0.88">88%</button>
+                  <button class="zoom-btn active" data-scale="1">100%</button>
+                </div>
+              </div>
+              <div class="toolbar-actions">
+                <span style="font-size:.74rem; font-weight:700; color:var(--ink-faint);">Watermark:</span>
+                <select class="watermark-select" id="watermarkSelect">
+                  <option value="none" selected>None</option>
+                  <option value="draft">DRAFT</option>
+                  <option value="confidential">CONFIDENTIAL</option>
+                  <option value="official">OFFICIAL</option>
+                  <option value="sample">SAMPLE</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Authentic Paper Wrapper -->
+            <div class="paper-scroll-wrapper">
+              <div class="document-paper" id="documentPaper">
+                <div class="paper-watermark" id="watermarkOverlay" style="display:none;">DRAFT</div>
+                <!-- Rendered dynamically by renderDocumentPaper() in documents.js -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SAVED DOCUMENTS MODAL / DRAWER -->
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+  <div class="history-modal" id="historyModal" role="dialog" aria-modal="true">
+    <div class="history-head">
+      <div class="history-title">Saved Workspace Documents</div>
+      <button class="icon-btn" id="closeHistoryModal" aria-label="Close modal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+    </div>
+    <div class="history-body" id="historyList">
+      <!-- Injected by documents.js -->
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION STACK -->
+  <div class="toast-stack" id="toastStack"></div>
+
+  <script src="../../public/js/pages/documents.js" type="module"></script>
+  <script src="../../public/js/ai-agent.js"></script>
+</body>
+</html>
+

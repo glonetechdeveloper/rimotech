@@ -79,89 +79,104 @@
           </div>
 
           <div class="question" data-step="3">
-            <p class="badge">Getting specific</p>
-            <h1 class="question-title">What's most of your work about?</h1>
-            <div class="choice-grid" id="choiceFocus">
-              <button class="choice-card" data-value="clients" data-key="focus">
-                <span class="choice-icon" data-icon="clients"></span>
-                <span class="choice-title">Client work</span>
-                <span class="choice-desc">Projects and retainers.</span>
+            <p class="badge">Selective customization</p>
+            <h1 class="question-title">What industry is your business in?</h1>
+            <div class="choice-grid" id="choiceFocus" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+              <button class="choice-card" data-value="ecommerce" data-key="focus">
+                <span class="choice-icon" data-icon="ecommerce"></span>
+                <span class="choice-title">E-Commerce &amp; Retail</span>
+                <span class="choice-desc">Orders, stock, shipping &amp; multi-channel.</span>
               </button>
-              <button class="choice-card" data-value="commerce" data-key="focus">
-                <span class="choice-icon" data-icon="commerce"></span>
-                <span class="choice-title">Selling products</span>
-                <span class="choice-desc">Orders and revenue.</span>
+              <button class="choice-card" data-value="warehousing" data-key="focus">
+                <span class="choice-icon" data-icon="warehousing"></span>
+                <span class="choice-title">Warehousing &amp; Logistics</span>
+                <span class="choice-desc">Bay bins, pallet capacity &amp; fleet dispatch.</span>
               </button>
-              <button class="choice-card" data-value="creative" data-key="focus">
-                <span class="choice-icon" data-icon="creative"></span>
-                <span class="choice-title">Making things</span>
-                <span class="choice-desc">Creative production.</span>
+              <button class="choice-card" data-value="powersystems" data-key="focus">
+                <span class="choice-icon" data-icon="powersystems"></span>
+                <span class="choice-title">Power Systems &amp; Energy</span>
+                <span class="choice-desc">Grid telemetry, sensors &amp; field orders.</span>
               </button>
-              <button class="choice-card" data-value="consulting" data-key="focus">
-                <span class="choice-icon" data-icon="consulting"></span>
-                <span class="choice-title">Consulting</span>
-                <span class="choice-desc">Advice and coaching.</span>
+              <button class="choice-card" data-value="healthcare" data-key="focus">
+                <span class="choice-icon" data-icon="healthcare"></span>
+                <span class="choice-title">Healthcare &amp; Clinics</span>
+                <span class="choice-desc">Patient triage, EMR, beds &amp; MD shifts.</span>
+              </button>
+              <button class="choice-card" data-value="agriculture" data-key="focus">
+                <span class="choice-icon" data-icon="agriculture"></span>
+                <span class="choice-title">Agriculture &amp; Farming</span>
+                <span class="choice-desc">Crop cycles, soil moisture &amp; grain silos.</span>
+              </button>
+              <button class="choice-card" data-value="artisans" data-key="focus">
+                <span class="choice-icon" data-icon="artisans"></span>
+                <span class="choice-title">Artisans &amp; Custom Trades</span>
+                <span class="choice-desc">Commissions, materials &amp; workshop jobs.</span>
+              </button>
+              <button class="choice-card" data-value="services" data-key="focus">
+                <span class="choice-icon" data-icon="services"></span>
+                <span class="choice-title">Client Services &amp; Agency</span>
+                <span class="choice-desc">Retainers, client briefs &amp; billable hours.</span>
               </button>
               <button class="choice-card" data-value="saas" data-key="focus">
                 <span class="choice-icon" data-icon="saas"></span>
-                <span class="choice-title">Software</span>
-                <span class="choice-desc">A product people use.</span>
+                <span class="choice-title">Software &amp; Tech</span>
+                <span class="choice-desc">Subscriptions, MRR &amp; API uptime.</span>
               </button>
             </div>
-            <p class="hint">Press 1–5 to select</p>
+            <p class="hint">Press 1–8 to select</p>
           </div>
 
           <div class="question" data-step="4">
-            <p class="badge">Almost halfway</p>
-            <h1 class="question-title">What matters most right now?</h1>
+            <p class="badge">Operational focus</p>
+            <h1 class="question-title">What is your primary expectation right now?</h1>
             <div class="choice-grid" id="choicePriority">
-              <button class="choice-card" data-value="organized" data-key="priority">
-                <span class="choice-icon" data-icon="organized"></span>
-                <span class="choice-title">Getting organized</span>
-                <span class="choice-desc">Less chaos, more structure.</span>
+              <button class="choice-card" data-value="fulfillment" data-key="priority">
+                <span class="choice-icon" data-icon="fulfillment"></span>
+                <span class="choice-title">Fast fulfillment &amp; supply</span>
+                <span class="choice-desc">Zero bottlenecks, rapid turnover.</span>
+              </button>
+              <button class="choice-card" data-value="uptime" data-key="priority">
+                <span class="choice-icon" data-icon="uptime"></span>
+                <span class="choice-title">Asset uptime &amp; reliability</span>
+                <span class="choice-desc">Real-time alerts, preventive maintenance.</span>
               </button>
               <button class="choice-card" data-value="revenue" data-key="priority">
                 <span class="choice-icon" data-icon="revenue"></span>
-                <span class="choice-title">Growing revenue</span>
-                <span class="choice-desc">More money coming in.</span>
+                <span class="choice-title">Growing revenue &amp; cashflow</span>
+                <span class="choice-desc">Milestone billing, automated collection.</span>
               </button>
-              <button class="choice-card" data-value="team" data-key="priority">
-                <span class="choice-icon" data-icon="team"></span>
-                <span class="choice-title">Managing the team</span>
-                <span class="choice-desc">Keeping everyone aligned.</span>
-              </button>
-              <button class="choice-card" data-value="cashflow" data-key="priority">
-                <span class="choice-icon" data-icon="cashflow"></span>
-                <span class="choice-title">Improving cash flow</span>
-                <span class="choice-desc">Knowing where money stands.</span>
+              <button class="choice-card" data-value="coordination" data-key="priority">
+                <span class="choice-icon" data-icon="coordination"></span>
+                <span class="choice-title">Team coordination &amp; shifts</span>
+                <span class="choice-desc">Field dispatch, staff rosters, alignment.</span>
               </button>
             </div>
             <p class="hint">Press 1–4 to select</p>
           </div>
 
           <div class="question" data-step="5">
-            <p class="badge">Almost there</p>
-            <h1 class="question-title">How do you get paid?</h1>
+            <p class="badge">Financial model</p>
+            <h1 class="question-title">How does revenue flow into your business?</h1>
             <div class="choice-grid" id="choicePayment">
               <button class="choice-card" data-value="invoices" data-key="payment">
                 <span class="choice-icon" data-icon="invoices"></span>
-                <span class="choice-title">Invoices</span>
-                <span class="choice-desc">Retainers and one-offs.</span>
+                <span class="choice-title">Invoices &amp; milestones</span>
+                <span class="choice-desc">Net terms, deposits &amp; stage payments.</span>
+              </button>
+              <button class="choice-card" data-value="direct" data-key="payment">
+                <span class="choice-icon" data-icon="onetime"></span>
+                <span class="choice-title">Direct checkout &amp; POS</span>
+                <span class="choice-desc">Instant card and cash sales.</span>
+              </button>
+              <button class="choice-card" data-value="contracts" data-key="payment">
+                <span class="choice-icon" data-icon="contracts"></span>
+                <span class="choice-title">Bulk supply contracts</span>
+                <span class="choice-desc">PPA tariffs, off-take purchase orders.</span>
               </button>
               <button class="choice-card" data-value="subscriptions" data-key="payment">
                 <span class="choice-icon" data-icon="subscriptions"></span>
-                <span class="choice-title">Subscriptions</span>
-                <span class="choice-desc">Recurring billing.</span>
-              </button>
-              <button class="choice-card" data-value="onetime" data-key="payment">
-                <span class="choice-icon" data-icon="onetime"></span>
-                <span class="choice-title">One-time sales</span>
-                <span class="choice-desc">Pay once, done.</span>
-              </button>
-              <button class="choice-card" data-value="notyet" data-key="payment">
-                <span class="choice-icon" data-icon="notyet"></span>
-                <span class="choice-title">Not charging yet</span>
-                <span class="choice-desc">Still early days.</span>
+                <span class="choice-title">Recurring subscriptions</span>
+                <span class="choice-desc">Monthly memberships &amp; retainers.</span>
               </button>
             </div>
             <p class="hint">Press 1–4 to select</p>
@@ -239,6 +254,7 @@
 
   </div>
 
+  <script src="../../public/js/core/workspace-engine.js"></script>
   <script src="../../public/js/core/generative-ui.js"></script>
   <script src="../../public/js/pages/onboarding.js"></script>
   <script src="../../public/js/ai-agent.js"></script>
