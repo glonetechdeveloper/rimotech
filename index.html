@@ -3,203 +3,419 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Business OS — The workspace that builds itself</title>
+<title>Rimotech — The Operating System for Modern Business</title>
+<meta name="description" content="One workspace, zero bloat: Invoicing, legal contracts, multi-warehouse inventory, CRM, and team operations.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Inter:wght@400;450;500;600;650;700&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./style.css">
 <link rel="stylesheet" href="./public/css/ai-agent.css">
 </head>
 <body>
 
-  <div class="ambient" id="ambient" aria-hidden="true"></div>
+  <div class="ambient" aria-hidden="true"></div>
 
-  <header class="site-nav">
-    <div class="nav-inner">
+  <!-- FLOATING PILL NAV (TREG.TO INSPIRED) -->
+  <div class="navwrap">
+    <nav class="nav">
       <a href="index.html" class="brand">
-        <img src="./assets/images/Rimotech_logo.png" alt="Rimotech logo">
-        <span class="brand-mark"></span>
+        <span class="glyph" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.5"/><rect x="13" y="13" width="8" height="8" rx="2.5"/><rect x="13" y="3" width="8" height="8" rx="2.5" fill-opacity="0.35"/><rect x="3" y="13" width="8" height="8" rx="2.5" fill-opacity="0.35"/></svg>
+        </span>
+        Rimotech
       </a>
 
-      <nav class="nav-links" id="navLinks">
-        <a href="#product">Product</a>
-        <a href="#how-it-works">How it works</a>
-        <a href="#features">Features</a>
-      </nav>
-
-      <div class="nav-actions">
-        <a href="./views/auth/login.html" class="nav-login">Log in</a>
-        <a href="./views/auth/register.html" class="btn-primary btn-sm">Get started</a>
+      <div class="links" id="navLinks">
+        <a href="#matrix">Modules</a>
+        <a href="./views/app/documents.html">Document Studio</a>
+        <a href="./views/app/inventory.html">Inventory</a>
+        <a href="./views/app/finances.html">Finances</a>
+        <a href="./views/app/dashboard.html">Live Workspace ↗</a>
+        <a href="./views/auth/login.html">Sign in</a>
+        <a href="./views/auth/register.html" class="candy sm">Get started</a>
       </div>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-    </div>
-  </header>
+    </nav>
+  </div>
 
   <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="wrap">
+        <span class="kicker rv">
+          <span class="kicker-dot"></span>
+          <b>Rimotech 2.0</b> · 15 Integrated Modules · <a href="./views/app/dashboard.html">Explore Live Workspace ↗</a>
+        </span>
 
-    <section class="hero" id="product">
-      <div class="hero-copy reveal">
-        <p class="badge">Generative UI, not another template</p>
-        <h1 class="hero-title">Business software that builds itself around you.</h1>
-        <p class="hero-sub">Answer a few questions. Watch your workspace assemble in real time — the exact modules you need, none of the bloat you don't.</p>
-        <div class="hero-actions">
-          <a href="./views/auth/register.html" class="btn-primary">Get started free</a>
-          <a href="./views/auth/login.html" class="btn-outline">See how it works</a>
-        </div>
-        <p class="hero-note">No credit card. Workspace ready in under 2 minutes.</p>
-      </div>
+        <h1 class="hero-h1 rv">
+          <span class="grad">The Operating System for Modern Business</span><br>
+          <span class="l2"><span class="grad">Turn your scattered tools into</span>
+          <span class="roleslot" id="roleslot"><span class="rw" id="rolewheel">one unified OS</span></span><span class="h1cursor"></span></span>
+        </h1>
 
-      <div class="hero-preview reveal">
-        <div class="canvas-frame" id="heroFrame">
-          <div class="canvas-header">
-            <span class="canvas-os-name">Northside Studio OS</span>
-            <span class="canvas-status">Live</span>
-          </div>
-          <div class="module-field">
-            <div class="module module-stagger" style="--d:0">
-              <div class="module-head"><span class="module-icon" data-icon="clients"></span><span class="module-title">Client pipeline</span></div>
-              <div class="kanban">
-                <div class="kanban-col"><h4>Leads</h4><span class="kanban-count">6</span></div>
-                <div class="kanban-col"><h4>Active</h4><span class="kanban-count">3</span></div>
-                <div class="kanban-col"><h4>Done</h4><span class="kanban-count">11</span></div>
+        <p class="hero-sub rv">
+          Stop paying $600/month across 10 disconnected subscriptions. Rimotech unifies your invoices, binding contracts, inventory stocking, client CRM, and team workflows in one clean workspace.
+        </p>
+
+        <!-- Interactive Scene / Architecture visual -->
+        <div class="scene rv" id="scene">
+          <!-- Cell 1: Operations -->
+          <div class="hcell">
+            <div class="sl">business operations</div>
+            <div class="aghead">
+              <div class="agavatar">JP</div>
+              <div class="agmeta">
+                <b>Northside Studio</b>
+                <i id="sc-agrole">agency:client-services</i>
               </div>
             </div>
-            <div class="module module-stagger" style="--d:1">
-              <div class="module-head"><span class="module-icon" data-icon="revenue"></span><span class="module-title">Revenue</span></div>
-              <svg class="ledger-chart" viewBox="0 0 200 60" preserveAspectRatio="none">
-                <polyline class="chart-line" points="0,50 30,42 60,44 90,28 120,32 150,14 180,18 200,6" fill="none" stroke-width="2.5"/>
-              </svg>
-              <p class="module-sub">Up 18% from last month.</p>
-            </div>
-            <div class="module module-stagger" style="--d:2">
-              <div class="module-head"><span class="module-icon" data-icon="team"></span><span class="module-title">Team</span></div>
-              <div class="avatar-row"><span class="avatar">AK</span><span class="avatar">JM</span><span class="avatar">RT</span></div>
-              <p class="module-sub">3 people, one shared calendar.</p>
-            </div>
-            <div class="module module-stagger" style="--d:3">
-              <div class="module-head"><span class="module-icon" data-icon="insights"></span><span class="module-title">Readiness</span></div>
-              <div class="dial-wrap">
-                <div class="dial" style="--pct:92"><div class="dial-inner">92%</div></div>
-                <p class="module-sub">Calibrated and ready.</p>
+            <div class="hsteps" id="sc-steps">
+              <div class="step-item">
+                <span>Inbound client proposal accepted</span>
+                <span class="tag">CRM</span>
+              </div>
+              <div class="step-item live">
+                <span>Generate MSA & deposit invoice</span>
+                <span class="tag">DOCS</span>
+              </div>
+              <div class="step-item">
+                <span>Log billable sprint hours & team time</span>
+                <span class="tag">TIME</span>
               </div>
             </div>
           </div>
+
+          <!-- Cell 2: Central Engine -->
+          <div class="hcell mid">
+            <div class="hcore">
+              <div class="hcore-glyph">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              <b>Rimotech OS</b>
+              <div class="hcore-desc">Central Ledger & Event Stream</div>
+              <span class="engine-pulse">● 0ms sync delay</span>
+            </div>
+          </div>
+
+          <!-- Cell 3: Live Toolbelt -->
+          <div class="hcell">
+            <div class="sl">integrated module suite</div>
+            <div class="htoolrow" id="sc-tools">
+              <div class="tool-chip">
+                <span>Document Studio (Contracts & SOWs)</span>
+                <span class="cost">Included</span>
+              </div>
+              <div class="tool-chip">
+                <span>Multi-Warehouse SKU Tracking</span>
+                <span class="cost">Real-time</span>
+              </div>
+              <div class="tool-chip">
+                <span>Client Deal Pipeline (Drag & Drop)</span>
+                <span class="cost">Included</span>
+              </div>
+            </div>
+            <div class="hfoot" id="sc-foot">
+              <span>replaces <strong>DocuSign & Harvest</strong></span>
+              <span style="font-family:var(--mono); color:var(--green);">Auto-synced</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Role / Workflow Quick Picker -->
+        <div style="margin-top:20px; display:flex; justify-content:center; gap:8px; flex-wrap:wrap;">
+          <button class="ghostbtn scene-tab active" data-scene="agency" onclick="switchScene('agency')">Agency & Studio</button>
+          <button class="ghostbtn scene-tab" data-scene="retail" onclick="switchScene('retail')">Retail & E-Commerce</button>
+          <button class="ghostbtn scene-tab" data-scene="saas" onclick="switchScene('saas')">Tech & Operations</button>
+        </div>
+
+        <!-- One-Click Command Givebox -->
+        <div class="givebox rv">
+          <div class="gb-h">
+            <span>Launch workspace terminal</span>
+            <div class="gb-icons">
+              <span class="gb-badge">Zero Config</span>
+              <span class="gb-badge">Local-First</span>
+            </div>
+          </div>
+          <div class="gb-code">
+            <code id="cliSnippet">npx create-rimotech-workspace my-business</code>
+            <button class="gb-copy" id="copyCliBtn">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+              Copy
+            </button>
+          </div>
+          <div class="gb-sub">
+            <span>✓ Ready in under 60 seconds</span>
+            <span>No credit card required</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="stats-strip reveal">
-      <div class="stats-inner">
-        <div class="stat-block"><span class="stat-value">4 min</span><span class="stat-label">Average setup time</span></div>
-        <div class="stat-block"><span class="stat-value">1</span><span class="stat-label">Workspace, every module</span></div>
-        <div class="stat-block"><span class="stat-value">0</span><span class="stat-label">Templates to configure</span></div>
+    <!-- ================= SAAS REPLACEMENT MATRIX ================= -->
+    <section class="roles" id="matrix">
+      <div class="wrap">
+        <div class="section-head rv">
+          <div class="section-kicker">Unified Architecture</div>
+          <h2 class="section-title">Connect your company to every tool it actually needs.</h2>
+          <p class="section-sub">Stop paying $500+/mo across fragmented subscriptions. Rimotech includes every module out of the box with zero per-seat markup.</p>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="role-tabs rv">
+          <button class="rtab active" data-cat="invoicing">Invoices & Documents</button>
+          <button class="rtab" data-cat="inventory">Inventory & Stock</button>
+          <button class="rtab" data-cat="crm">Client CRM & Deals</button>
+          <button class="rtab" data-cat="operations">Operations & Time</button>
+        </div>
+
+        <!-- Replacement Grid -->
+        <div class="pgrid rv" id="replacementGrid">
+          <div class="pcard">
+            <div>
+              <div class="pcard-top">
+                <span class="pcard-title">Commercial Invoicing & Payments</span>
+                <div class="pcard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+              </div>
+              <div class="pcard-sub" style="margin-top:6px;">Itemized billing, tax & discount math, automated wire instructions</div>
+            </div>
+            <div class="pcard-pricing">
+              <s>FreshBooks · $35/mo</s>
+              <em>Included · $0</em>
+            </div>
+          </div>
+          <div class="pcard">
+            <div>
+              <div class="pcard-top">
+                <span class="pcard-title">Legal Contracts & Retainers</span>
+                <div class="pcard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+              </div>
+              <div class="pcard-sub" style="margin-top:6px;">Master Services Agreements, Statement of Work, recurring retainers</div>
+            </div>
+            <div class="pcard-pricing">
+              <s>DocuSign · $45/mo</s>
+              <em>Included · $0</em>
+            </div>
+          </div>
+          <div class="pcard">
+            <div>
+              <div class="pcard-top">
+                <span class="pcard-title">Mutual NDAs & Inventions IP</span>
+                <div class="pcard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+              </div>
+              <div class="pcard-sub" style="margin-top:6px;">Standard trade secret protection & IP assignment agreements</div>
+            </div>
+            <div class="pcard-pricing">
+              <s>LegalZoom · $39/mo</s>
+              <em>Included · $0</em>
+            </div>
+          </div>
+          <div class="pcard">
+            <div>
+              <div class="pcard-top">
+                <span class="pcard-title">HR Offer Letters & Direct Deposit</span>
+                <div class="pcard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+              </div>
+              <div class="pcard-sub" style="margin-top:6px;">New hire compensation, benefits checklist & banking authorizations</div>
+            </div>
+            <div class="pcard-pricing">
+              <s>Deel / Gusto · $49/mo</s>
+              <em>Included · $0</em>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="savings-banner rv" id="savingsBanner">
+            ✓ $168/mo of subscriptions → 100% included in your workspace
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="how-it-works" id="how-it-works">
-      <p class="badge center">How it works</p>
-      <h2 class="section-title center">Three steps. One workspace.</h2>
+    <!-- ================= BENTO BENEFITS GRID ================= -->
+    <section class="bens">
+      <div class="wrap">
+        <div class="section-head rv">
+          <div class="section-kicker">Core Capabilities</div>
+          <h2 class="section-title">Built like software should be.</h2>
+          <p class="section-sub">Surfaces instead of bloated menus. Fast keyboard navigation. Clean data exports.</p>
+        </div>
 
-      <div class="steps-grid">
-        <div class="step-card reveal">
-          <span class="step-number">01</span>
-          <h3 class="step-title">Answer a few questions</h3>
-          <p class="step-desc">Tell us about your team, your focus, and how you get paid. Takes about two minutes.</p>
-        </div>
-        <div class="step-card reveal">
-          <span class="step-number">02</span>
-          <h3 class="step-title">Watch it build itself</h3>
-          <p class="step-desc">Your answers assemble a live workspace in front of you — CRM, invoicing, chat, whatever fits.</p>
-        </div>
-        <div class="step-card reveal">
-          <span class="step-number">03</span>
-          <h3 class="step-title">Start running your business</h3>
-          <p class="step-desc">No setup wizard, no empty dashboard. It opens ready to use, built around how you actually work.</p>
+        <div class="bgrid rv">
+          <!-- Card 1: Single Hub -->
+          <div class="bcard span-7">
+            <div class="bcard-num">01 / ARCHITECTURE</div>
+            <div>
+              <h3>One unified database, <i>zero silos.</i></h3>
+              <p>Clients in your CRM automatically link to your invoices. Invoices deduct inventory stock. Team time logs populate client bills. Everything connects without brittle webhook zaps.</p>
+            </div>
+            <div class="bcard-visual">
+              <div class="bcard-row">
+                <span>Client: Dana Osei (Reef Co.)</span>
+                <em>Stage: Closed Won ($4,500)</em>
+              </div>
+              <div class="bcard-row">
+                <span>Invoice: #INV-0148 (Phase 1 Deposit)</span>
+                <em>Paid via Wire</em>
+              </div>
+              <div class="bcard-row">
+                <span>Assigned IT Hardware: MacBook Pro 16"</span>
+                <em>Serial: C02GK993MD</em>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Document Studio -->
+          <div class="bcard span-5">
+            <div class="bcard-num">02 / LEGAL & BILLING</div>
+            <div>
+              <h3>Document Studio for <i>real business.</i></h3>
+              <p>No fake AI stamps or toy generators. Professional itemized tax invoices, binding MSAs, NDAs, employee offer letters, and asset handovers ready to print or save as PDF.</p>
+            </div>
+            <div class="bcard-visual">
+              <div class="bcard-row">
+                <span>Master Services Agreement</span>
+                <em>6 Standard Clauses</em>
+              </div>
+              <div class="bcard-row">
+                <span>Commercial Tax Invoice</span>
+                <em>Net 14 Days</em>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Multi-Location Inventory -->
+          <div class="bcard span-4">
+            <div class="bcard-num">03 / INVENTORY</div>
+            <div>
+              <h3>Multi-warehouse <i>stocking.</i></h3>
+              <p>Track retail storefronts, central warehouses, cold storage, and 3PL hubs with real-time valuation and automated reorder buffer warnings.</p>
+            </div>
+            <div class="bcard-visual">
+              <div class="bcard-row">
+                <span>ANC Headphones</span>
+                <em>42 units on hand</em>
+              </div>
+              <div class="bcard-row">
+                <span>Shipping Boxes (50pk)</span>
+                <em>160 units (3PL)</em>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Keyboard Speed -->
+          <div class="bcard span-4">
+            <div class="bcard-num">04 / PERFORMANCE</div>
+            <div>
+              <h3>Keyboard-first <i>speed.</i></h3>
+              <p>Press <code>/</code> anywhere to search clients, documents, or inventory. Zero lag. Instant response times under 50ms.</p>
+            </div>
+            <div class="bcard-visual">
+              <div class="bcard-row">
+                <span>Global Search: Press /</span>
+                <em>Instant results</em>
+              </div>
+              <div class="bcard-row">
+                <span>Print to PDF: Ctrl + P</span>
+                <em>Vector Sharp</em>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Full Ownership -->
+          <div class="bcard span-4">
+            <div class="bcard-num">05 / DATA FREEDOM</div>
+            <div>
+              <h3>100% data ownership, <i>zero lock-in.</i></h3>
+              <p>Export all client records, financial reports, documents, and stock counts to clean CSVs at any time. Your business data belongs to you.</p>
+            </div>
+            <div class="bcard-visual">
+              <div class="bcard-row">
+                <span>CSV One-Click Export</span>
+                <em>Full Data Dump</em>
+              </div>
+              <div class="bcard-row">
+                <span>Open Standards</span>
+                <em>JSON / REST / SQL</em>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="features" id="features">
-      <p class="badge center">What's inside</p>
-      <h2 class="section-title center">Every module, only when you need it.</h2>
+    <!-- ================= CLOSING CTA ================= -->
+    <section class="close">
+      <div class="wrap">
+        <div class="rv">
+          <h2>
+            <span class="grad">Connect your entire company to</span><br>
+            <span class="grad">the software it actually needs.</span>
+          </h2>
+          <p class="sub">
+            One workspace for your clients, billing, inventory, and operations. Built for speed, clarity, and control.
+          </p>
 
-      <div class="feature-grid">
-        <div class="feature-card reveal">
-          <span class="feature-icon" data-icon="clients"></span>
-          <h3 class="feature-title">Client pipeline</h3>
-          <p class="feature-desc">Track leads, active work, and closed deals without a spreadsheet.</p>
+          <div class="close-actions">
+            <a href="./views/auth/register.html" class="candy">Get started free</a>
+            <a href="./views/app/dashboard.html" class="ghostbtn">Open Live Workspace ↗</a>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <span class="feature-icon" data-icon="invoices"></span>
-          <h3 class="feature-title">Invoicing</h3>
-          <p class="feature-desc">Send invoices and get paid — one-time, recurring, or retainer.</p>
-        </div>
-        <div class="feature-card reveal">
-          <span class="feature-icon" data-icon="emailchat"></span>
-          <h3 class="feature-title">Team chat</h3>
-          <p class="feature-desc">One thread per project instead of scattered email and DMs.</p>
-        </div>
-        <div class="feature-card reveal">
-          <span class="feature-icon" data-icon="revenue"></span>
-          <h3 class="feature-title">Revenue tracking</h3>
-          <p class="feature-desc">See what's coming in, what's owed, and where it's headed.</p>
-        </div>
-        <div class="feature-card reveal">
-          <span class="feature-icon" data-icon="saas"></span>
-          <h3 class="feature-title">Automations</h3>
-          <p class="feature-desc">Let routine follow-ups and reminders run themselves.</p>
-        </div>
-        <div class="feature-card reveal">
-          <span class="feature-icon" data-icon="insights"></span>
-          <h3 class="feature-title">Insights</h3>
-          <p class="feature-desc">A plain-language read on how the business is actually doing.</p>
+
+        <div class="trustline rv">
+          <span><b>100% Data Ownership</b> · Zero Lock-In</span>
+          <span><b>15 Built-in Modules</b> · Ready to use</span>
+          <span><b>Unlimited Seats</b> · No extortionate upgrades</span>
         </div>
       </div>
     </section>
-
-    <section class="cta-band reveal">
-      <h2 class="cta-title">Ready to see your workspace?</h2>
-      <p class="cta-sub">It only takes a few answers to find out.</p>
-      <a href="auth/register.html" class="btn-primary btn-lg">Get started free</a>
-    </section>
-
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <a href="index.html" class="brand">
-          <img src="/assets/images/Rimotech_logo.png" alt="Business OS logo">
-          <span class="brand-mark"></span>
-        </a>
-        <p class="footer-tagline">The adaptive operating system for running your business.</p>
+  <!-- ================= MINIMALIST FOOTER ================= -->
+  <footer>
+    <div class="foot-in">
+      <div class="foot-brand">
+        <div class="brand">
+          <span class="glyph" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.5"/><rect x="13" y="13" width="8" height="8" rx="2.5"/><rect x="13" y="3" width="8" height="8" rx="2.5" fill-opacity="0.35"/><rect x="3" y="13" width="8" height="8" rx="2.5" fill-opacity="0.35"/></svg>
+          </span>
+          Rimotech Business OS
+        </div>
+        <div class="note">The open operating system for modern business.</div>
       </div>
 
-      <div class="footer-col">
-        <h4>Product</h4>
-        <a href="#product">Overview</a>
-        <a href="#how-it-works">How it works</a>
-        <a href="#features">Features</a>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="#">About</a>
-        <a href="#">Careers</a>
-        <a href="#">Contact</a>
-      </div>
-      <div class="footer-col">
-        <h4>Account</h4>
-        <a href="./views/auth/login.html">Log in</a>
-        <a href="./views/auth/register.html">Create account</a>
-      </div>
+      <nav class="foot-cols" aria-label="Footer navigation">
+        <div class="foot-col">
+          <div class="lab">Modules</div>
+          <a href="./views/app/documents.html">Document Studio</a>
+          <a href="./views/app/inventory.html">Inventory & Stock</a>
+          <a href="./views/app/finances.html">Finances & Billing</a>
+          <a href="./views/app/crm.html">Client CRM</a>
+          <a href="./views/app/tasks.html">Tasks & Projects</a>
+        </div>
+        <div class="foot-col">
+          <div class="lab">Platform</div>
+          <a href="./views/app/dashboard.html">Live Dashboard</a>
+          <a href="./views/app/reports.html">Reports & Analytics</a>
+          <a href="./views/app/automations.html">Automations</a>
+          <a href="./views/app/files.html">File Drive</a>
+          <a href="./views/app/settings.html">Settings</a>
+        </div>
+        <div class="foot-col">
+          <div class="lab">Company</div>
+          <a href="./views/auth/login.html">Sign In</a>
+          <a href="./views/auth/register.html">Get Started</a>
+          <a href="./views/onboarding/onboarding.html">Workspace Setup</a>
+        </div>
+      </nav>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 Rimotech. All rights reserved.</span>
-    </div>
+
+    <!-- Background Watermark (TREG.TO Signature) -->
+    <div class="watermark" aria-hidden="true">rimotech</div>
   </footer>
 
   <script src="./script.js"></script>
